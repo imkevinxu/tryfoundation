@@ -13,10 +13,15 @@
   if ($("#editor").length) {
     // Adjusts height for IDE view
     $(window).resize(function() {
-      var winHeight = $(window).height();
-      $('#editor').height(winHeight - 45);
-      $('#preview-wrapper').height((winHeight - 45)/2);
-      $('#preview').height((winHeight - 45)/2 - $('#chrome-frame').height() + 1);
+      var winHeight = $(this).height() - 45;
+      var chromeFrameHeight = $('#chrome-frame').height();
+      $('#editor').height(winHeight);
+      $('#preview').height(winHeight/2 - chromeFrameHeight + 1);
+      $('#preview-wrapper, #content').height(winHeight/2);
+      this.setTimeout(function() {
+        $('.section-container').height(winHeight/2);
+        $('.section-container div.content').height(winHeight/2 - 81);
+      }, 100);
     });
 
     var editor = ace.edit("editor");
@@ -46,6 +51,7 @@
     updatePreview();
     session.on("change", updatePreview);
   }
+
 
   /* -----------------------------------------
      ZURB FOUNDATION INITIALIZATION

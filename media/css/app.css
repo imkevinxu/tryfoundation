@@ -163,8 +163,28 @@ input:-ms-input-placeholder { color: #d5dadd; }
 }
 
 #lesson #content {
-
 }
+
+#lesson .section-container {
+    margin: 0;
+}
+
+#lesson .section-container div.content {
+    overflow: scroll;
+}
+
+
+/* -----------------------------------------
+   HACKY STYLES
+----------------------------------------- */
+
+.CodeRay .content {
+  top: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  position: inherit !important;
+  display: inherit !important;
+  background-color: inherit !important; }
 
 /* -----------------------------------------
    RESPONSIVE STYLES
