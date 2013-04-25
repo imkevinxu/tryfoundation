@@ -16,6 +16,8 @@ from librarian.models import *
 from librarian.model_forms import *
 from librarian.forms import *
 
-#@login_required
 def index(request):
     return render(request, "index.html", locals())
+
+def learn(request):
+    return render(request, "learn.html", locals())

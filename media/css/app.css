@@ -41,6 +41,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     color: #222;
 }
 
@@ -53,12 +54,13 @@ input:-ms-input-placeholder { color: #d5dadd; }
 ----------------------------------------- */
 
 #homepage #hero {
-    background-color: #2BA6CB;
+    background-color: #0f96b6;
     background-image: url(/media/images/yeti.png);
     background-repeat: no-repeat;
     background-position: 100% 0%;
     font-weight: 300;
     color: #FFF;
+    padding-bottom: 20px;
 }
 
 #homepage #hero p {
@@ -122,4 +124,26 @@ input:-ms-input-placeholder { color: #d5dadd; }
     font-size: 0.75rem;
     margin-top: 15px;
     display: block;
+}
+
+/* -----------------------------------------
+   LEARN STYLES
+----------------------------------------- */
+
+#learn .lesson {
+    border: 1px solid #A0A0A0;
+    height: 150px;
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE STYLES
+----------------------------------------- */
+
+@media only screen and (max-width: 48em) {
+
+    #homepage #hero {
+        background-image: none;
+    }
+
 }
