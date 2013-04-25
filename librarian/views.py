@@ -20,6 +20,7 @@ def index(request):
     return render(request, "index.html", locals())
 
 def learn(request):
+    lessons = Lesson.objects.all()
     return render(request, "learn.html", locals())
 
 def lesson(request, slug):

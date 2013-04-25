@@ -6,36 +6,50 @@
 
 {% block content %}
 
-<div id="homepage">
-    <div id="hero">
-        <div class="row">
-            <div class="large-12 columns">
-                <h1>Try <span class="strong">Foundation</span></h1>
+<div id="hero">
+    <div class="row">
+        <div class="large-12 columns">
+            <h1>Try <span class="strong">Foundation</span></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-8 columns">
+            <h2>Interactive lessons and projects to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+            <div class="panel">
+                <p>Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+
+                <form action="">
+
+                    <div class="row collapse">
+                        <div class="small-9 columns">
+                            <input type="email" placeholder="Email address" required />
+                        </div>
+                        <div class="small-3 columns">
+                            <input type="submit" class="button prefix" value="Get started" />
+                        </div>
+                    </div>
+
+                </form>
+
+                <small>* Not affiliated or endorsed by <a href="http://zurb.com/?ref=tryfoundation" target="_blank">ZURB</a>... yet...</small>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="row">
-            <div class="large-8 columns">
-                <h2>Interactive lessons and projects to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
-                <div class="panel">
-                    <p>Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+<div id="demo">
+    <div class="row">
+        <div class="large-5 columns">
+            <div id="demoEditor">{{'<h1>Hello World!</h1>'|escape}}</div>
+        </div>
 
-                    <form action="">
+        <div class="large-2 columns">
+        </div>
 
-                        <div class="row collapse">
-                            <div class="small-9 columns">
-                                <input type="email" placeholder="Email address" required />
-                            </div>
-                            <div class="small-3 columns">
-                                <input type="submit" class="button prefix" value="Get started" />
-                            </div>
-                        </div>
-
-                    </form>
-
-                    <small>* Not affiliated or endorsed by <a href="http://zurb.com/?ref=tryfoundation" target="_blank">ZURB</a>... yet...</small>
-                </div>
-            </div>
+        <div class="large-5 columns">
+            <img src="{{ MEDIA_URL }}images/chrome-frame.png" alt="chrome-frame">
+            <iframe id="demoPreview"></iframe>
         </div>
     </div>
 </div>

@@ -1,6 +1,39 @@
 ;(function ($, window, undefined) {
 
   /* -----------------------------------------
+     DEMO EDITOR SETTINGS
+  ----------------------------------------- */
+
+  if ($("#demoEditor").length) {
+    var demoEditor = ace.edit("demoEditor");
+    var demoSession = demoEditor.getSession();
+    var demoIframe = $('#demoPreview')[0];
+
+    demoEditor.setTheme("ace/theme/tomorrow_night_eighties");
+    demoSession.setMode("ace/mode/html");
+    demoSession.setUseWrapMode(true);
+    demoEditor.setFontSize(16);
+
+    var updateDemoPreview = function() {
+        demoIframe.contentWindow.document.open('text/html', 'replace');
+        demoIframe.contentWindow.document.write(demoSession.getValue());
+        demoIframe.contentWindow.document.close();
+        var demoIframeContents = $('#demoPreview').contents();
+        demoIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
+        demoIframeContents.find('body').css('padding', '15px 20px 0px');
+        demoIframeContents.find('a').each(function() {
+          $(this).attr("target", "_blank");
+          if ($(this).attr('href') && $(this).attr('href').indexOf("http://") < 0) {
+            $(this).attr('href', "http://" + $(this).attr('href'));
+          }
+        });
+    }
+
+    updateDemoPreview();
+    demoSession.on("change", updateDemoPreview);
+  }
+
+  /* -----------------------------------------
      ACE EDITOR SETTINGS
   ----------------------------------------- */
 
@@ -34,9 +67,14 @@
         iframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
         iframeContents.find('body').css('padding', '10px 20px 0px');
         iframeContents.find('a').each(function() {
-          $(this).attr("target", "_blank");
-          if ($(this).attr('href') && $(this).attr('href').indexOf("http://") < 0) {
-            $(this).attr('href', "http://" + $(this).attr('href'));
+          var $this = $(this);
+          $this.attr("target", "_blank");
+          if ($this.attr('href')) {
+            if ($this.attr('href').indexOf("#") == 0) {
+              $this.attr("target", "");
+            } else if ($this.attr('href').indexOf("http://") < 0) {
+              $this.attr('href', "http://" + $this.attr('href'));
+            }
           }
         });
     }
@@ -112,6 +150,7 @@
     $('#quizTryAgainWrapper').fadeToggle(function() {
       $('#quizSubmit').fadeToggle();
     });
+
   });
 
 

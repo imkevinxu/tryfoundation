@@ -51,10 +51,10 @@ input:-moz-placeholder { color: #d5dadd; }
 input:-ms-input-placeholder { color: #d5dadd; }
 
 /* -----------------------------------------
-   HOMEPAGE STYLES
+   HERO STYLES
 ----------------------------------------- */
 
-#homepage #hero {
+#hero {
     background-color: #0f96b6;
     background-image: url(/media/images/yeti.png);
     background-repeat: no-repeat;
@@ -63,50 +63,50 @@ input:-ms-input-placeholder { color: #d5dadd; }
     color: #FFF;
 }
 
-#homepage #hero p {
+#hero p {
     font-size: 1.1rem;
     color: #FFF;
 }
 
-#homepage #hero h1 {
+#hero h1 {
     font-size: 4rem;
     font-weight: 300;
     color: #FFF;
 }
 
-#homepage #hero h2 {
+#hero h2 {
     font-weight: 300;
     color: #FFF;
 }
 
-#homepage #hero .strong {
+#hero .strong {
     font-weight: 600;
 }
 
-#homepage #hero .panel {
+#hero .panel {
     background-color: #137795;
     border: none;
 }
 
-#homepage #hero a {
+#hero a {
     color: #FFF;
 }
 
-#homepage #hero a:hover {
+#hero a:hover {
     text-decoration: underline;
 }
 
-#homepage #hero form, #homepage #hero input {
+#hero form, #hero input {
     margin: 0;
 }
 
-#homepage #hero form input {
+#hero form input {
     height: 45px;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-#homepage #hero form .button {
+#hero form .button {
     height: 45px;
     font-size: 1.1rem;
     background-color: #F03012;
@@ -115,14 +115,39 @@ input:-ms-input-placeholder { color: #d5dadd; }
     -webkit-box-shadow: none;
 }
 
-#homepage #hero form .button:hover {
+#hero form .button:hover {
     background-color: #D82B11;
 }
 
-#homepage #hero small {
+#hero small {
     font-size: 0.75rem;
     margin-top: 15px;
     display: block;
+}
+
+/* -----------------------------------------
+   DEMO STYLES
+----------------------------------------- */
+
+#demo {
+    background-color: #242424;
+    background-image: url(/media/images/black_linen_v2.png);
+    height: 500px;
+    padding: 80px 0;
+}
+
+#demoEditor {
+    width: 100%;
+    height: 300px;
+}
+
+#demoPreview {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #E6E6E6;
+    border-top: none;
+    position: relative;
+    top: -4px;
 }
 
 /* -----------------------------------------
@@ -186,9 +211,8 @@ input:-ms-input-placeholder { color: #d5dadd; }
     overflow: scroll;
 }
 
-
 /* -----------------------------------------
-   LESSON STYLES
+   QUIZ STYLES
 ----------------------------------------- */
 
 #quizModal .emphasis {
@@ -233,7 +257,7 @@ input:-ms-input-placeholder { color: #d5dadd; }
 
 @media only screen and (max-width: 48em) {
 
-    #homepage #hero {
+    #hero {
         background-image: none;
     }
 
