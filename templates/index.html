@@ -6,27 +6,41 @@
 
 {% block content %}
 
-<div id="main" class="row">
-    <div class="large-12 columns">
-        <h2>Thanks for using Django Project Builder!</h2>
-        <blockquote>
-            <h5 style="margin-top: 0">You are using a custom fork by <a href="https://github.com/imkevinxu" target="_blank">imkevinxu</a></h5>
+<div id="homepage">
+    <div id="hero">
+        <div class="row">
+            <div class="large-12 columns">
+                <h1>Try <span class="strong">Foundation</span></h1>
+            </div>
+        </div>
 
-            <li style="margin-left:35px"><h5><a href="http://jinja.pocoo.org/docs/" target="_blank">Jinja2</a> templating engine enabled with <a href="https://github.com/coffin/coffin" target="_blank">Coffin</a></h5></li>
+        <div class="row">
+            <div class="large-8 columns">
+                <h2>Interactive lessons and projects to learn <span class="strong">ZURB Foundation</span>*</h2>
+                <div class="panel">
+                    <p>Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
 
-            <li style="margin-left:35px"><h5><a href="https://github.com/django-debug-toolbar/django-debug-toolbar" target="_blank">Django Debug Toolbar</a> enabled</h5></li>
+                    <form action="">
 
-            <li style="margin-left:35px"><h5><a href="https://docs.djangoproject.com/en/dev/topics/auth/#using-bcrypt-with-django" target="_blank">bcrypt</a> password hashing enabled</h5></li>
+                        <div class="row collapse">
+                            <div class="small-9 columns">
+                                <input type="email" placeholder="Email address" required />
+                            </div>
+                            <div class="small-3 columns">
+                                <input type="submit" class="button prefix" value="Get started" />
+                            </div>
+                        </div>
 
-            <li style="margin-left:35px"><h5><a href="https://www.djangoproject.com/" target="_blank">Django</a> 1.4 with <a href="http://south.readthedocs.org/en/0.7.6/index.html" target="_blank">South</a> database migration</h5></li>
+                    </form>
 
-            <p>It's highly experimental and constantly being updated with random best practices so check out the fork on <a href="https://github.com/imkevinxu/django-projectbuilder" target="_blank">Github</a> or email Kevin at <a href="mailto:kevin@imkevinxu.com?Subject=Awesome Django Project Builder Fork!" target="_blank">kevin@imkevinxu.com</a> and let him know what you think!</p>
-        </blockquote>
-
-        <br/>
-        <h5>Original DPB built by the kickass people at <a href="http://builtbyptm.com/blog/announcing-django-project-builder-v01/" target="_blank">PTM</a></h5>
-        <p>Feel free to contribute improvements to the original project on <a href="https://github.com/prototypemagic/django-projectbuilder" target="_blank">the GitHub page</a></p>
+                    <small>* Not affiliated or endorsed by <a href="http://zurb.com/?ref=tryfoundation" target="_blank">ZURB</a>... yet...</small>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+
 </div>
 
 {% endblock %}

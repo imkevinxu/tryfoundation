@@ -28,6 +28,8 @@ def login(request, template_name='registration/login.html', redirect_field_name=
         current_site = Site.objects.get_current()
     else:
         current_site = RequestSite(request)
+    form.fields['username'].label = 'Email'
+    form.fields['username'].initial = request.GET.get('email', '')
     return render_to_response(template_name, {
         'form': form,
         redirect_field_name: redirect_to,

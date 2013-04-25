@@ -1,6 +1,12 @@
 /* Artfully masterminded by Kevin Xu <kevin@imkevinxu.com> */
 
 /* -----------------------------------------
+   FONT STYLES
+----------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,300italic,400italic,600italic,700italic);
+
+/* -----------------------------------------
    SHARED STYLES
 ----------------------------------------- */
 
@@ -29,82 +35,91 @@ html, body {
 }
 
 body {
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /*font-family: 'Crimson Text', serif;*/
+    font-family: 'Open Sans', sans-serif;
     color: #222;
 }
 
-/* -----------------------------------------
-   HEADER & FOOTER STYLES
------------------------------------------ */
-
-header h1 {
-    display: inline-block;
-    font-weight: 500;
-}
-
-header #right_nav {
-    position: absolute;
-    right: 15px;
-    top: 25px;
-}
-
-header #right_nav i {
-    position: relative;
-    padding-right: 4px;
-    top: 1px;
-}
-
-footer {
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
-}
+input::-webkit-input-placeholder { color: #d5dadd; }
+input:-moz-placeholder { color: #d5dadd; }
+input:-ms-input-placeholder { color: #d5dadd; }
 
 /* -----------------------------------------
-   LOGIN STYLES
+   HOMEPAGE STYLES
 ----------------------------------------- */
 
-#login .columns {
-    margin-top: 20px;
-    padding: 20px 50px;
-    background-color: #E9E9E9;
-    border: 1px solid #C3C3C3;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+#homepage #hero {
+    background-color: #2BA6CB;
+    background-image: url(/media/images/yeti.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    font-weight: 300;
+    color: #FFF;
 }
 
-#login h2 {
-    text-align: center;
-    font-weight: 500;
+#homepage #hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #FFF;
 }
 
-#login li { list-style-type: none; }
-#login ul.errorlist {
-    color: red;
-    font-style: bold;
+#homepage #hero h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #FFF;
 }
 
-#login input[type=submit] {
-    width: 120px;
-    margin-top: 10px;
-    margin-left: 50%;
-    left: -60px;
+#homepage #hero h2 {
+    font-weight: 300;
+    color: #FFF;
 }
 
+#homepage #hero .strong {
+    font-weight: 600;
+}
 
+#homepage #hero .panel {
+    background-color: #137795;
+    border: none;
+}
 
+#homepage #hero a {
+    color: #FFF;
+}
 
+#homepage #hero a:hover {
+    text-decoration: underline;
+}
 
+#homepage #hero form, #homepage #hero input {
+    margin: 0;
+}
 
+#homepage #hero form input {
+    height: 45px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
+#homepage #hero form .button {
+    height: 45px;
+    font-size: 1.1rem;
+    background-color: #F03012;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
 
+#homepage #hero form .button:hover {
+    background-color: #D82B11;
+}
 
-
-
-
-/* END SPACING */
+#homepage #hero small {
+    font-size: 0.75rem;
+    margin-top: 15px;
+    display: block;
+}

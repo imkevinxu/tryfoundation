@@ -7,10 +7,10 @@ from django.core import serializers
 from django.core.context_processors import csrf
 from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
-from coffin.shortcuts import render_to_response, get_object_or_404, render, \
-    redirect
 from django.template import loader, RequestContext
 from django.views.decorators.csrf import csrf_exempt
+from coffin.shortcuts import render_to_response, render, redirect
+from emailusernames.utils import create_user, get_user, user_exists
 
 from librarian.models import *
 from librarian.model_forms import *
