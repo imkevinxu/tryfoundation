@@ -6,6 +6,7 @@ Auto-generated from [Kevin Xu](https://github.com/imkevinxu)'s [Django Project B
 ### Development Team
 
 * Kevin Xu <kevin@imkevinxu.com>
+* Charlie Guo <charlierguo@gmail.com>
 
 ## Getting Started
 
@@ -14,14 +15,15 @@ Auto-generated from [Kevin Xu](https://github.com/imkevinxu)'s [Django Project B
 For best results, make sure you have at least:
 
 * Python 2.7
-* Django 1.4
+* Django 1.5
 
 ### Customizations
 
+* [South](http://south.readthedocs.org/en/0.7.6/index.html) database migration
 * [Jinja2](http://jinja.pocoo.org/docs/) templating with [Coffin](https://github.com/coffin/coffin)
 * [Django Debug Toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
 * [bcrypt](https://docs.djangoproject.com/en/dev/topics/auth/#using-bcrypt-with-django) password hashing
-* [South](http://south.readthedocs.org/en/0.7.6/index.html) database migration
+* [django-email-as-username](https://github.com/dabapps/django-email-as-username)
 
 ### Installing the Application
 
