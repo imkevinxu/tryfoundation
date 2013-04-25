@@ -4,6 +4,7 @@
 
   var winHeight = $(window).height();
   $('#editor').height(winHeight - 45);
+  $('#preview').height((winHeight - 45)/2);
 
 
 

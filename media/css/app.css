@@ -151,6 +151,12 @@ input:-ms-input-placeholder { color: #d5dadd; }
     width: 100%;
 }
 
+#lesson #preview {
+    width: 100%;
+    padding: 30px 20px;
+    border: none;
+}
+
 /* -----------------------------------------
    RESPONSIVE STYLES
 ----------------------------------------- */

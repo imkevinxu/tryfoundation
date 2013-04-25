@@ -29,10 +29,10 @@
 
     <div id="left">
         {% set html = '<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
     <title></title>
+    <link rel="stylesheet" href="foundation.css" />
 </head>
 <body>
 
@@ -45,7 +45,7 @@
     </div>
 
     <div id="right">
-        ahea
+        <iframe id="preview"></iframe>
 
     </div>
 
@@ -59,9 +59,21 @@
 <script src="http://rawgithub.com/ajaxorg/ace-builds/master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
+    var session = editor.getSession();
+
     editor.setTheme("ace/theme/tomorrow_night_eighties");
-    editor.getSession().setMode("ace/mode/html");
+    session.setMode("ace/mode/html");
+    session.setUseWrapMode(true);
     editor.setFontSize(20);
+    session.on("change", function() {
+        var html = session.getValue();
+        var iframe = $('#preview')[0];
+        iframe.contentWindow.document.open('text/html', 'replace');
+        iframe.contentWindow.document.write(html);
+        iframe.contentWindow.document.close();
+        var iframeHead = $('#preview').contents().find('head');
+        $(iframeHead).html('<link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.min.css">');
+    });
 </script>
 
 {% endblock %}
