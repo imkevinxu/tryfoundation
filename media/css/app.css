@@ -1,0 +1,110 @@
+/* Artfully masterminded by Kevin Xu <kevin@imkevinxu.com> */
+
+/* -----------------------------------------
+   SHARED STYLES
+----------------------------------------- */
+
+.fl { float: left; }
+.fr { float: right; }
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
+.center { margin: 0 auto; }
+.clear { clear: both; }
+.block { display: block !important; }
+.none { display: none !important; }
+.inline-block { display: inline-block !important; }
+.error { color: #c60f13; }
+.visible { opacity: 1; }
+.invisible { opacity: 0; }
+
+/* -----------------------------------------
+   BASE STYLES
+----------------------------------------- */
+
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /*font-family: 'Crimson Text', serif;*/
+    color: #222;
+}
+
+/* -----------------------------------------
+   HEADER & FOOTER STYLES
+----------------------------------------- */
+
+header h1 {
+    display: inline-block;
+    font-weight: 500;
+}
+
+header #right_nav {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+
+header #right_nav i {
+    position: relative;
+    padding-right: 4px;
+    top: 1px;
+}
+
+footer {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+/* -----------------------------------------
+   LOGIN STYLES
+----------------------------------------- */
+
+#login .columns {
+    margin-top: 20px;
+    padding: 20px 50px;
+    background-color: #E9E9E9;
+    border: 1px solid #C3C3C3;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#login h2 {
+    text-align: center;
+    font-weight: 500;
+}
+
+#login li { list-style-type: none; }
+#login ul.errorlist {
+    color: red;
+    font-style: bold;
+}
+
+#login input[type=submit] {
+    width: 120px;
+    margin-top: 10px;
+    margin-left: 50%;
+    left: -60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* END SPACING */
