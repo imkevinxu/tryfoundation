@@ -11,7 +11,6 @@
   ----------------------------------------- */
 
   if ($("#editor").length) {
-    // Adjusts height for IDE view
     $(window).resize(function() {
       var winHeight = $(this).height() - 45;
       var chromeFrameHeight = $('#chrome-frame').height();
