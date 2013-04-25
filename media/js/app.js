@@ -2,7 +2,8 @@
 
   /* Javascript masterminded by Kevin Xu <kevin@imkevinxu.com> */
 
-
+  var winHeight = $(window).height();
+  $('#editor').height(winHeight - 45);
 
 
 

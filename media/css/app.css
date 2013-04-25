@@ -32,6 +32,7 @@ html, body {
     width: 100%;
     margin: 0px;
     padding: 0px;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -58,14 +59,12 @@ input:-ms-input-placeholder { color: #d5dadd; }
     background-image: url(/media/images/yeti.png);
     background-repeat: no-repeat;
     background-position: 100% 0%;
-    font-weight: 300;
-    color: #FFF;
     padding-bottom: 20px;
+    color: #FFF;
 }
 
 #homepage #hero p {
     font-size: 1.1rem;
-    font-weight: 300;
     color: #FFF;
 }
 
@@ -135,6 +134,22 @@ input:-ms-input-placeholder { color: #d5dadd; }
     height: 150px;
 }
 
+/* -----------------------------------------
+   LESSON STYLES
+----------------------------------------- */
+
+#lesson .top-bar {
+    margin: 0;
+}
+
+#lesson #left, #lesson #right {
+    width: 50%;
+    float: left;
+}
+
+#lesson #editor {
+    width: 100%;
+}
 
 /* -----------------------------------------
    RESPONSIVE STYLES

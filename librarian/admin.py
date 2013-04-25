@@ -1,10 +1,10 @@
 from librarian.models import *
 from django.contrib import admin
 
-# class DataAdmin(admin.ModelAdmin):
-#     list_display = ('data', 'created_at')
-#     list_filter = ('created_at',)
-#     ordering = ['-created_at']
-#     search_fields = ['data']
-#
-# admin.site.register(Data, DataAdmin)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = ('title', 'created_at')
+    ordering = ['-created_at']
+    search_fields = ['title']
+    prepopulated_fields = {'slug': ('title',),}
+
+admin.site.register(Lesson, LessonAdmin)

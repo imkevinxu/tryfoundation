@@ -21,3 +21,12 @@ def index(request):
 
 def learn(request):
     return render(request, "learn.html", locals())
+
+def lesson(request, slug):
+    try:
+        lesson = Lesson.objects.get(slug=slug)
+
+    except Lesson.DoesNotExist:
+        return redirect('index')
+
+    return render(request, "lesson.html", locals())
