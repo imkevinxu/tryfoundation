@@ -151,10 +151,20 @@ input:-ms-input-placeholder { color: #d5dadd; }
     width: 100%;
 }
 
+#lesson #preview-wrapper {
+
+    background-color: #2C2C2C;
+}
+
 #lesson #preview {
     width: 100%;
-    padding: 30px 20px;
     border: none;
+    position: relative;
+    top: -3px;
+}
+
+#lesson #preview html {
+    padding: 20px;
 }
 
 /* -----------------------------------------
