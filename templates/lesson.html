@@ -28,10 +28,10 @@
     </nav>
 
     <div id="left">
-        <div id="editor">{% include "code/buttons.html" %}</div>
+        <div id="editor">{% include lesson.code_partial %}</div>
 
         {% set awesomePhrase = ["I'm Awesome", "Foundation Rocks", "Next Lesson", "Quiz Me", "Booya!"]%}
-        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random}}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
+        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random }}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>
 
     <div id="right">
@@ -45,19 +45,19 @@
                 <section>
                     <p class="title" data-section-title><a href="#lesson">Lesson</a></p>
                     <div class="content" data-section-content>
-                        {% include "lesson/buttons.html" %}
+                        {% include lesson.lesson_partial %}
                     </div>
                 </section>
                 <section>
                     <p class="title" data-section-title><a href="#examples">Examples</a></p>
                     <div class="content" data-section-content>
-                        {% include "example/buttons.html" %}
+                        {% include lesson.example_partial %}
                     </div>
                 </section>
                 <section>
                     <p class="title" data-section-title><a href="#documentation">Documentation</a></p>
                     <div class="content" data-section-content>
-                        {% include "documentation/buttons.html" %}
+                        {% include lesson.documentation_partial %}
                     </div>
                 </section>
             </div>
@@ -67,9 +67,7 @@
 </div>
 
 <div id="quizModal" class="reveal-modal medium">
-    <h2>Awesome. I have it.</h2>
-    <p class="lead">Your couch.  It is mine.</p>
-    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    {% include lesson.quiz_partial %}
     <a class="close-reveal-modal">&#215;</a>
 </div>
 
