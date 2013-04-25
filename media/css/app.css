@@ -147,12 +147,11 @@ input:-ms-input-placeholder { color: #d5dadd; }
     float: left;
 }
 
-#lesson #editor {
+#lesson #editor, #lesson #chrome-frame {
     width: 100%;
 }
 
 #lesson #preview-wrapper {
-
     background-color: #2C2C2C;
 }
 
@@ -163,8 +162,8 @@ input:-ms-input-placeholder { color: #d5dadd; }
     top: -3px;
 }
 
-#lesson #preview html {
-    padding: 20px;
+#lesson #content {
+
 }
 
 /* -----------------------------------------
