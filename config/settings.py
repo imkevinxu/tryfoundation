@@ -108,6 +108,12 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS' : False,
 }
 
+AUTHENTICATION_BACKENDS = (
+    'emailusernames.backends.EmailAuthBackend',
+    # Uncomment the following to make Django tests pass:
+    # 'django.contrib.auth.backends.ModelBackend',
+)
+
 from django.core.urlresolvers import reverse_lazy
 
 LOGIN_REDIRECT_URL = reverse_lazy('index')
@@ -141,6 +147,7 @@ INSTALLED_APPS = (
     'south',
     'coffin',
     'debug_toolbar',
+    'emailusernames',
     'librarian',
 
 )
