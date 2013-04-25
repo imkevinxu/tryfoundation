@@ -1,11 +1,5 @@
 ;(function ($, window, undefined) {
 
-  /* Javascript masterminded by Kevin Xu <kevin@imkevinxu.com> */
-
-
-
-
-
   /* -----------------------------------------
      ACE EDITOR SETTINGS
   ----------------------------------------- */
@@ -50,6 +44,75 @@
     updatePreview();
     session.on("change", updatePreview);
   }
+
+  /* -----------------------------------------
+     QUIZ EDITOR SETTINGS
+  ----------------------------------------- */
+
+  if ($("#quizEditor").length) {
+    var quizEditor = ace.edit("quizEditor");
+    var quizSession = quizEditor.getSession();
+    var quizIframe = $('#quizPreview')[0];
+
+    quizEditor.setTheme("ace/theme/tomorrow_night_eighties");
+    quizSession.setMode("ace/mode/html");
+    quizSession.setUseWrapMode(true);
+    quizEditor.setFontSize(16);
+
+    var updateQuizPreview = function() {
+        quizIframe.contentWindow.document.open('text/html', 'replace');
+        quizIframe.contentWindow.document.write(quizSession.getValue());
+        quizIframe.contentWindow.document.close();
+        var quizIframeContents = $('#quizPreview').contents();
+        quizIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
+        quizIframeContents.find('body').css('padding', '15px 20px 0px');
+        quizIframeContents.find('a').each(function() {
+          $(this).attr("target", "_blank");
+          if ($(this).attr('href') && $(this).attr('href').indexOf("http://") < 0) {
+            $(this).attr('href', "http://" + $(this).attr('href'));
+          }
+        });
+    }
+
+    updateQuizPreview();
+    quizSession.on("change", updateQuizPreview);
+  }
+
+  /* -----------------------------------------
+     QUIZ LOGIC
+  ----------------------------------------- */
+
+  $('#quizSubmit').on('click', function(e) {
+    e.preventDefault();
+
+    $('#quizEditor').fadeToggle(function() {
+      $('#quizPreviewWrapper').fadeToggle();
+    });
+
+    if (passQuiz()) {
+      $(this).fadeToggle(function() {
+        $('#quizCongratsWrapper').fadeToggle();
+      });
+
+    } else {
+      $(this).fadeToggle(function() {
+        $('#quizTryAgainWrapper').fadeToggle();
+      });
+    }
+
+  });
+
+  $('#quizTryAgain').on('click', function(e) {
+    e.preventDefault();
+
+    $('#quizPreviewWrapper').fadeToggle(function() {
+      $('#quizEditor').fadeToggle();
+    });
+
+    $('#quizTryAgainWrapper').fadeToggle(function() {
+      $('#quizSubmit').fadeToggle();
+    });
+  });
 
 
   /* -----------------------------------------

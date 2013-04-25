@@ -31,7 +31,7 @@
         <div id="editor">{% include "code/buttons.html" %}</div>
 
         {% set awesomePhrase = ["I'm Awesome", "Foundation Rocks", "Next Lesson", "Quiz Me", "Booya!"]%}
-        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random}}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
+        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random }}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>
 
     <div id="right">
@@ -67,9 +67,7 @@
 </div>
 
 <div id="quizModal" class="reveal-modal medium">
-    <h2>Awesome. I have it.</h2>
-    <p class="lead">Your couch.  It is mine.</p>
-    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    {% include "quiz/buttons.html" %}
     <a class="close-reveal-modal">&#215;</a>
 </div>
 
