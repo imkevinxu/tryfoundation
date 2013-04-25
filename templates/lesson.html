@@ -29,8 +29,9 @@
 
     <div id="left">
         <div id="editor">{% include "code/buttons.html" %}</div>
-        <a href="#" class="button" id="continue">I feel awesome</a>
 
+        {% set awesomePhrase = ["I'm Awesome", "Foundation Rocks", "Next Lesson", "Quiz Me", "Booya!"]%}
+        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random}}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>
 
     <div id="right">
@@ -42,19 +43,19 @@
         <div id="content">
             <div class="section-container tabs" data-section="tabs">
                 <section>
-                    <p class="title" data-section-title><a href="#panel1">Lesson</a></p>
+                    <p class="title" data-section-title><a href="#lesson">Lesson</a></p>
                     <div class="content" data-section-content>
                         {% include "lesson/buttons.html" %}
                     </div>
                 </section>
                 <section>
-                    <p class="title" data-section-title><a href="#panel2">Examples</a></p>
+                    <p class="title" data-section-title><a href="#examples">Examples</a></p>
                     <div class="content" data-section-content>
                         {% include "example/buttons.html" %}
                     </div>
                 </section>
                 <section>
-                    <p class="title" data-section-title><a href="#panel3">Documentation</a></p>
+                    <p class="title" data-section-title><a href="#documentation">Documentation</a></p>
                     <div class="content" data-section-content>
                         {% include "documentation/buttons.html" %}
                     </div>
@@ -63,7 +64,13 @@
         </div>
     </div>
 
+</div>
 
+<div id="quizModal" class="reveal-modal medium">
+    <h2>Awesome. I have it.</h2>
+    <p class="lead">Your couch.  It is mine.</p>
+    <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+    <a class="close-reveal-modal">&#215;</a>
 </div>
 
 {% endblock %}

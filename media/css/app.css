@@ -152,10 +152,15 @@ input:-ms-input-placeholder { color: #d5dadd; }
     width: 100%;
 }
 
-#lesson #continue {
+#lesson #modalButton {
     position: absolute;
     bottom: 0;
     right: 20px;
+}
+
+#lesson #modalButton i {
+    position: relative;
+    top: 3px;
 }
 
 #lesson #preview-wrapper {
