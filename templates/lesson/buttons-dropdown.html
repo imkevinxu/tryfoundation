@@ -6,3 +6,12 @@
 	<a href="#" class="button dropdown secondary round">See All Options</a>
 	<a href="#" class="button split success radius">Click OR See Options<span></span></a>
 </div>
+
+<script type="text/javascript">
+	var checkObjective = function(contents) {
+		return ($(contents).find('.button.dropdown.secondary.round').length > 0 ||
+				$(contents).find('button.dropdown.secondary.round').length > 0) &&
+				($(contents).find('.button.split.success.radius').length > 0 ||
+				$(contents).find('button.split.success.radius').length > 0);
+	};
+</script>

@@ -5,3 +5,10 @@
 <div class="button">Button</div>
 
 <p>Hint: Take a look at the examples!</p>
+
+<script type="text/javascript">
+	var checkObjective = function(contents) {
+		return $(contents).find('.button').length > 0 ||
+				$(contents).find('button').length > 0;
+	};
+</script>

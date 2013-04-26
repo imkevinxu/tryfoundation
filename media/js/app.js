@@ -123,6 +123,27 @@
      QUIZ LOGIC
   ----------------------------------------- */
 
+  $('.objective-check').click(function(e) {
+    e.preventDefault();
+
+    var objectiveResult = checkObjective($('#preview').contents());
+    if (objectiveResult) {
+      $('#objectiveModal .objective-success').fadeIn();
+      $('#objectiveModal .objective-failure').fadeOut();
+    } else {
+      $('#objectiveModal .objective-failure').fadeIn();
+      $('#objectiveModal .objective-success').fadeOut();
+    }
+  });
+
+  $('.objective-retry').click(function(e) {
+    e.preventDefault();
+
+    $('#objectiveModal').foundation('reveal', 'close');
+    $('#objectiveModal .objective-failure').fadeOut();
+  })
+
+/*
   $('#quizSubmit').on('click', function(e) {
     e.preventDefault();
 
@@ -155,7 +176,7 @@
     });
 
   });
-
+*/
 
   /* -----------------------------------------
      ZURB FOUNDATION INITIALIZATION
