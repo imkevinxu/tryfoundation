@@ -114,8 +114,16 @@
 
     {% if ref %}
         <div id="create-modal" class="reveal-modal medium">
-            <h2>Interactive lessons to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
-            <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+            {% if ref == "stuck" %}
+                <h2>Stuck? Sign up to learn how to build beautiful websites with <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+                <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast.</p>
+            {% elif ref == "learn" %}
+                <h2>Amazing. Learn how to build more beautiful websites with <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+                <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast.</p>
+            {% else %}
+                <h2>Interactive lessons to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+                <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+            {% endif %}
 
             <form action="{% url create %}" method="post"> {% csrf_token %}
                 <input type="email" name="email" placeholder="Email" required />
@@ -129,8 +137,9 @@
     {% endif %}
 
     <div id="social-modal" class="reveal-modal small">
-        <h2>You're awesome.</h2>
-        <p class="lead">Tell your friends you're going to master Foundation</p>
+        {% set awesomePhrase=["awesome", "fantastic", "magnificent", "super", "wonderful", "cool", "a champ"]%}
+        <h2>You're {{ awesomePhrase|random }}.</h2>
+        <p class="lead">Tell your friends you're going to master Foundation and life</p>
 
         <a href="https://twitter.com/intent/tweet?button_hashtag=tryfoundation&text=I%27m%20learning%20%40ZURB%20%40foundation%20through%20interactive%20lessons%20thanks%20to" class="twitter-hashtag-button" data-size="large" data-related="tryfoundation" data-url="http://www.tryfoundation.io/learn?ref=twitter" data-dnt="true" class="twitter">Tweet #tryfoundation</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

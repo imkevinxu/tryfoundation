@@ -57,22 +57,30 @@
             <div id="demoEditor">{% include "_index_demo.html" %}</div>
         </div>
 
-        <div class="large-2 columns">
+        <div class="large-2 columns middle">
+            <h3>RECREATE THIS BUTTON</h3>
             <div class="button">The Prize</div>
-            <a href="" class="button secondary">Get Help</a>
+            <a href="/learn?ref=stuck" id="stuck">Are you stuck?</a>
         </div>
 
         <div class="large-5 columns">
-            <img src="{{ MEDIA_URL }}images/chrome-frame.png" alt="chrome-frame">
+            <img src="{{ MEDIA_URL }}images/mini-chrome-frame.png" alt="chrome-frame">
             <iframe id="demoPreview"></iframe>
         </div>
     </div>
 </div>
 
 <div id="landingModal" class="reveal-modal medium">
-    <p>Booyah! You did it!</p>
-    <p>Want to learn how to build more with Foundation?</p>
-    <p><a href="" class="button success">See More Lessons</a></p>
+    <h1>Booyah! You did it!</h1>
+    <p class="lead">Want to learn how to build more with Foundation?</p>
+
+    <a href="/learn?ref=learn" class="custom button expand">See More Lessons</a>
+
+    <a href="https://twitter.com/intent/tweet?button_hashtag=tryfoundation&text=I%27m%20learning%20%40ZURB%20%40foundation%20through%20interactive%20lessons%20thanks%20to" class="twitter-hashtag-button" data-size="large" data-related="tryfoundation" data-url="http://www.tryfoundation.io/learn?ref=twitter" data-dnt="true" class="twitter">Tweet #tryfoundation</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <div class="fb-like" data-href="http://www.tryfoundation.io/" data-send="false" data-width="150" data-show-faces="true"></div>
+
+    <a class="close-reveal-modal">&#215;</a>
 </div>
 
 {% endblock %}
