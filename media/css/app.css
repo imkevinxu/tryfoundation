@@ -296,6 +296,7 @@ input[type="url"][readonly], textarea[readonly] {
     float: left;
     width: 22%;
     height: 140px;
+    margin-bottom: 2rem;
     margin-right: 2rem;
     position: relative;
 
@@ -338,7 +339,35 @@ input[type="url"][readonly], textarea[readonly] {
     color: #F03012;
 }
 
-#learn li.lesson.disabled a {
+#learn .lesson.completed {
+    border: 1px solid #34A829;
+}
+
+#learn .lesson.completed i, #learn .lesson.completed .title {
+    color: #34A829;
+}
+
+#learn .lesson.completed:hover {
+    border-color: #2A8521;
+}
+
+#learn .lesson.completed:hover i, #learn .lesson.completed:hover .title {
+    color: #2A8521;
+}
+
+#learn .lesson.disabled:hover {
+    border-color: #E0E0E0;
+}
+
+#learn .lesson.disabled:hover i {
+    color: #E0E0E0;
+}
+
+#learn .lesson.disabled .title {
+    color: #E0E0E0;;
+}
+
+#learn .lesson.disabled {
     color: #CCC;
 }
 
