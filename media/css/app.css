@@ -86,23 +86,9 @@ input[type="url"][readonly], textarea[readonly] {
    SHARE STYLES
 ----------------------------------------- */
 
-#share {
-    height: 30px;
-    margin-top: 8px;
-}
-
-#share .fb-like {
-    top: -50px;
-}
-
-#share .twitter-share-button {
-    height: 54px !important;
-    width: 87px !important;
-}
-
-#share #___plusone_0 {
-    position: relative;
-    top: -34px;
+.share {
+    text-align: right;
+    top: 8px;
 }
 
 /* -----------------------------------------
@@ -110,15 +96,33 @@ input[type="url"][readonly], textarea[readonly] {
 ----------------------------------------- */
 
 footer {
-    background-color: #0f96b6;
     height: 100px;
     padding: 20px 0 0;
 }
 
 footer h3 {
     font-weight: 300;
-    color: #FFF;
     margin: 0;
+}
+
+footer#homepage {
+    background-color: #0f96b6;
+}
+
+footer#homepage h3, footer#homepage small, footer#homepage a {
+    color: #FFF;
+}
+
+footer#homepage a:hover {
+    text-decoration: underline;
+}
+
+footer#homepage small a {
+    text-decoration: underline;
+}
+
+footer#homepage small a:hover {
+    text-decoration: none;
 }
 
 /* -----------------------------------------

@@ -24,6 +24,7 @@ except ImportError:
     import simplejson as json
 
 def index(request):
+    homepage = True
     return render(request, "index.html", locals())
 
 def learn(request):

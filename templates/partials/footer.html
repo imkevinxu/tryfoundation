@@ -1,17 +1,17 @@
-<footer>
+<footer id="{% if homepage %}homepage{% endif %}">
     <div class="row">
-        <div class="large-6 columns">
+        <div class="large-9 columns">
 
-            <h3>&copy; Alpha 2013</h3>
+            <h3>&copy; Alpha 2013&nbsp;|&nbsp;<a href="#" data-reveal-id="aboutModal">About</a>&nbsp;|&nbsp;<small>Not affiliated with <a href="http://zurb.com/?ref=tryfoundation" target="_blank">ZURB</a></small></h3>
 
         </div>
-        <div class="large-6 columns">
+        <div class="large-3 columns share">
 
             <!-- Facebook Like Button -->
-            <div class="fb-like" data-href="http://thefaithinhumanity.com/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+            <div class="fb-like" data-href="http://www.tryfoundation.io/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 
             <!-- Twitter Tweet Button -->
-            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Learn @ZURB @Foundation with interactive lessons" data-url="http://www.tryfoundation.io/">Tweet</a>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Learn @Foundation frontend programming with these brand spanking new interactive lessons" data-url="http://www.tryfoundation.io/">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
             <!-- Google+ Button -->
@@ -27,3 +27,10 @@
         </div>
     </div>
 </footer>
+
+<div id="aboutModal" class="reveal-modal medium">
+  <h2>Awesome. I have it.</h2>
+  <p class="lead">Your couch.  It is mine.</p>
+  <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
