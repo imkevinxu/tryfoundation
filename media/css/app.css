@@ -59,9 +59,31 @@ input:-ms-input-placeholder { color: #d5dadd; }
     background-color: #0f96b6;
     background-image: url(/media/images/yeti.png);
     background-repeat: no-repeat;
-    background-position: 100% 0%;
+    background-position: 100% 100px;
     padding-bottom: 20px;
     color: #FFF;
+}
+
+#hero #nav ul {
+    margin: 0;
+    top: 20px;
+}
+
+#hero #nav li {
+    float: right;
+    margin: 0;
+    list-style-type: none;
+}
+
+#hero #nav a:not(.button) {
+    top: 10px;
+    right: 15px;
+    position: relative;
+    text-decoration: underline
+}
+
+#hero #nav .button {
+    color: #444;
 }
 
 #hero p {
@@ -70,12 +92,13 @@ input:-ms-input-placeholder { color: #d5dadd; }
 }
 
 #hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     color: #FFF;
 }
 
 #hero h2 {
+    font-size: 3rem;
     font-weight: 300;
     color: #FFF;
 }
