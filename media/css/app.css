@@ -232,6 +232,10 @@ input:-ms-input-placeholder { color: #d5dadd; }
     top: -4px;
 }
 
+#demoModal {
+    display: none;
+}
+
 /* -----------------------------------------
    HEADER NORMAL STYLES
 ----------------------------------------- */

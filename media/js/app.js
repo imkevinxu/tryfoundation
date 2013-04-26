@@ -62,6 +62,8 @@
             $(this).attr('href', "http://" + $(this).attr('href'));
           }
         });
+        try { checkDemo(demoIframeContents); }
+        catch (err) {}
     }
 
     updateDemoPreview();
