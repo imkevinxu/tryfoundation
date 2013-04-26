@@ -2,7 +2,7 @@
 {% block title %}{{ super() }}{% endblock %}
 {% block meta_description %}{% endblock %}
 
-{% block extra_head %}{% endblock %}
+{% block extra_head %}<style type="text/css">li.lesson.disabled a { color: #CCC; }</style>{% endblock %}
 
 {% block content %}
 
@@ -18,8 +18,8 @@
                 <h4>Buttons</h4>
                 <ul class="side-nav">
                     <li class="lesson"><a href="/lesson/buttons-basic"><i class="icon-check"></i> Basic Buttons</a></li>
-                    <li class="lesson"><a href="/lesson/buttons-advanced"><i class="icon-check-empty"></i> Colors, Shapes &amp; Sizes</a></li>
-                    <li class="lesson"><a href="/lesson/buttons-group"><i class="icon-check-empty"></i> Button Groups</a></li>
+                    <li class="lesson"><a href="/lesson/buttons-advanced"><i class="icon-check-empty"></i>Advanced Buttons</a></li>
+                    <li class="lesson"><a href="/lesson/buttons-groups"><i class="icon-check-empty"></i> Button Groups</a></li>
                     <li class="lesson"><a href="/lesson/buttons-dropdown"><i class="icon-check-empty"></i> Dropdowns &amp; Split Buttons</a></li>
                 </ul>
             </div>
@@ -27,22 +27,22 @@
             <div class="lesson-set small-3 columns">
                 <h4>Components</h4>
                 <ul class="side-nav">
-                    <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Alerts</a></li>
-                    <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Labels</a></li>
-                    <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Progress Bars</a></li>
-                    <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Panels</a></li>
-                    <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Pricing Tables</a></li>
+                    <li class="lesson"><a href="/lesson/alerts"><i class="icon-check-empty"></i> Alerts</a></li>
+                    <li class="lesson"><a href="/lesson/labels"><i class="icon-check-empty"></i> Labels</a></li>
+                    <li class="lesson"><a href="/lesson/progress-bars"><i class="icon-check-empty"></i> Progress Bars</a></li>
+                    <li class="lesson"><a href="/lesson/panels"><i class="icon-check-empty"></i> Panels</a></li>
+                    <!-- <li class="lesson"><a href="#"><i class="icon-check-empty"></i> Pricing Tables</a></li> -->
                 </ul>
             </div>
 
             <div class="lesson-set small-3 columns">
                 <h4>Navigation <small> Coming Soon!</small></h4>
                 <ul class="side-nav">
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Top Bar</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Side Nav</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Sub Nav</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Breadcrumbs</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Pagination</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Top Bar</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Side Nav</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Sub Nav</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Breadcrumbs</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Pagination</a></li>
                 </ul>
             </div>
 
@@ -50,9 +50,9 @@
             <div class="lesson-set small-3 columns">
                 <h4>The Grid <small> Coming Soon!</small></h4>
                 <ul class="side-nav">
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Rows &amp; Columns</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Offsets &amp; Centering</a></li>
-                    <li class="lesson"><a href="#"><!--i class="icon-check-empty"></i--> Source Ordering</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Rows &amp; Columns</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Offsets &amp; Centering</a></li>
+                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Source Ordering</a></li>
                 </ul>
             </div>
             </div>
