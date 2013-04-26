@@ -29,12 +29,9 @@
     <!-- Included CSS Files (Uncompressed) -->
     <!-- <link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.css"> -->
 
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css"> -->
-
     <!-- Included CSS Files -->
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/normalize.css" />
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/foundation.min.css" />
-    <!-- <link rel="stylesheet" href="{{ MEDIA_URL }}css/coderay.css" /> -->
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/prism.css">
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/animate.css">
     <link rel="stylesheet" href="{{ MEDIA_URL }}css/app.css" />
@@ -63,6 +60,21 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40465651-1']);
+      _gaq.push(['_setDomainName', 'tryfoundation.io']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
 
 </head>
 
@@ -101,13 +113,6 @@
     <!-- <script src="{{ MEDIA_URL }}js/jquery.textchange.min.js"></script> -->
 
     {% block javascript %}{% endblock %}
-
-    <!-- <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script> -->
 
 </body>
 </html>
