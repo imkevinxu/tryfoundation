@@ -83,6 +83,29 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 /* -----------------------------------------
+   SHARE STYLES
+----------------------------------------- */
+
+#share {
+    height: 30px;
+    margin-top: 8px;
+}
+
+#share .fb-like {
+    top: -50px;
+}
+
+#share .twitter-share-button {
+    height: 54px !important;
+    width: 87px !important;
+}
+
+#share #___plusone_0 {
+    position: relative;
+    top: -34px;
+}
+
+/* -----------------------------------------
    FOOTER STYLES
 ----------------------------------------- */
 
