@@ -233,9 +233,6 @@ input[type="url"][readonly], textarea[readonly] {
 #demo .middle .button {
     font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     font-weight: bold;
-
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-smoothing: subpixel-antialiased;
 }
 
 #demo .middle a#stuck {

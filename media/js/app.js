@@ -97,7 +97,7 @@
         demoIframe.contentWindow.document.write(demoSession.getValue());
         demoIframe.contentWindow.document.close();
         var demoIframeContents = $('#demoPreview').contents();
-        demoIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
+        demoIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css"><link rel="stylesheet" href="/media/css/iframe.css">');
         demoIframeContents.find('body').css('padding', '15px 20px 0px');
         demoIframeContents.find('a').each(function() {
           $(this).attr("target", "_blank");
@@ -145,7 +145,7 @@
         iframe.contentWindow.document.write(session.getValue());
         iframe.contentWindow.document.close();
         var iframeContents = $('#preview').contents();
-        iframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
+        iframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css"><link rel="stylesheet" href="/media/css/iframe.css">');
         iframeContents.find('body').css('padding', '10px 20px 0px');
         iframeContents.find('a').each(function() {
           var $this = $(this);
@@ -184,7 +184,7 @@
         quizIframe.contentWindow.document.write(quizSession.getValue());
         quizIframe.contentWindow.document.close();
         var quizIframeContents = $('#quizPreview').contents();
-        quizIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css">');
+        quizIframeContents.find('head').html('<link rel="stylesheet" href="/media/css/foundation.min.css"><link rel="stylesheet" href="/media/css/iframe.css">');
         quizIframeContents.find('body').css('padding', '15px 20px 0px');
         quizIframeContents.find('a').each(function() {
           $(this).attr("target", "_blank");
