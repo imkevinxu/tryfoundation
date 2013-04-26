@@ -114,8 +114,13 @@
 
     {% if ref %}
         <div id="create-modal" class="reveal-modal medium">
-            <h2>Interactive lessons to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
-            <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+            {% if ref == "stuck" %}
+                <h2>Stuck? Sign up to learn how to build beautiful websites with <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+                <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast.</p>
+            {% else %}
+                <h2>Interactive lessons to learn <span class="strong"><a href="http://foundation.zurb.com/?ref=tryfoundation" target="_blank">ZURB Foundation</a></span>*</h2>
+                <p class="lead">Foundation is a popular front-end framework for coding HTML/CSS really fast. Sign up with your email to learn right now, completely free.</p>
+            {% endif %}
 
             <form action="{% url create %}" method="post"> {% csrf_token %}
                 <input type="email" name="email" placeholder="Email" required />

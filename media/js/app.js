@@ -90,7 +90,7 @@
     demoSession.setMode("ace/mode/html");
     demoSession.setUseWrapMode(true);
     demoEditor.setShowPrintMargin(false);
-    demoEditor.setFontSize(16);
+    demoEditor.setFontSize(15);
 
     var updateDemoPreview = function() {
         demoIframe.contentWindow.document.open('text/html', 'replace');

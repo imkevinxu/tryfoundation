@@ -218,8 +218,34 @@ input[type="url"][readonly], textarea[readonly] {
 #demo {
     background-color: #242424;
     background-image: url(/media/images/black_linen_v2.png);
-    height: 500px;
-    padding: 80px 0;
+    padding: 50px 0;
+}
+
+#demo .middle {
+    text-align: center;
+}
+
+#demo .middle h3 {
+    color: #FFF;
+    font-weight: 300;
+}
+
+#demo .middle .button {
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: bold;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+}
+
+#demo .middle a#stuck {
+    position: relative;
+    top: 50px;
+    color: #FFF;
+}
+
+#demo .middle a#stuck:hover {
+    text-decoration: underline;
 }
 
 #demoEditor {
@@ -229,7 +255,7 @@ input[type="url"][readonly], textarea[readonly] {
 
 #demoPreview {
     width: 100%;
-    height: 300px;
+    height: 270px;
     border: 1px solid #E6E6E6;
     border-top: none;
     position: relative;
