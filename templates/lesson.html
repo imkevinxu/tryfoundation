@@ -43,24 +43,28 @@
 </div>
 
 <div id="objectiveModal" class="reveal-modal medium">
-
     <div class="objective-success">
         <div class="row">
-            <h3>Awesome! You got it!</h3>
+            <div class="large-12 columns">
+                <h2>Awesome! You got it!</h2>
+            </div>
         </div>
         <div class="row">
-            <div class="small-3 columns"><a href="/learn" class="button secondary">All Lessons</a></div>
-            <div class="small-3 columns"><a href="{{ next_lesson }}" class="button success">Next Lesson</a></div>
+            <div class="large-6 columns"><a href="#" class="success button expand">Next Lesson</a></div>
+            <div class="large-6 columns"><a href="{% url learn %}" class="secondary button expand">All Lessons</a></div>
         </div>
     </div>
 
     <div class="objective-failure">
         <div class="row">
-            <h3>Sorry :( That doesn't seem to be right.</h3>
+            <div class="large-12 columns">
+                <h2>Sorry, something seems off :(</h2>
+                <p>Read the lesson and look through some of the examples for help.</p>
+            </div>
         </div>
         <div class="row">
-            <div class="small-3 columns"><a href="/learn" class="button secondary">All Lessons</a></div>
-            <div class="small-3 columns"><a href="#" class="button alert objective-retry">Keep Trying</a></div>
+            <div class="large-6 columns"><a href="#" class="custom button expand">Keep Trying</a></div>
+            <div class="large-6 columns"><a href="{% url learn %}" class="secondary button expand">All Lessons</a></div>
         </div>
     </div>
 

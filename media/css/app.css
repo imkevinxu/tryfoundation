@@ -401,6 +401,10 @@ input[type="url"][readonly], textarea[readonly] {
    LESSON STYLES
 ----------------------------------------- */
 
+#lesson {
+    font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+}
+
 #lesson #left, #lesson #right {
     width: 50%;
     float: left;
@@ -458,30 +462,15 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 /* -----------------------------------------
-   QUIZ STYLES
+   OBJECTIVE STYLES
 ----------------------------------------- */
 
-#objectiveModal .emphasis {
-    font-weight: 700;
-    color: #0f6684;
+#objectiveModal h2 {
+    font-weight: 300;
 }
 
-#objectiveModal #quizEditor {
-    width: 100%;
-    height: 42px;
-}
-
-#objectiveModal #quizPreview {
-    width: 100%;
-    border: 1px solid #E6E6E6;
-    border-top: none;
-    position: relative;
-    top: -4px;
-}
-
-#objectiveModal .objective-success,
-#objectiveModal .objective-failure {
-    display: none;
+#objectiveModal p {
+    font-size: 1.3rem;
 }
 
 /* -----------------------------------------
