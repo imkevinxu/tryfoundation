@@ -262,8 +262,13 @@ input[type="url"][readonly], textarea[readonly] {
     top: -4px;
 }
 
-#demoModal {
-    display: none;
+#landingModal h1 {
+    font-weight: 300;
+}
+
+#landingModal .fb-like {
+    top: 6px;
+    left: 20px;
 }
 
 /* -----------------------------------------
