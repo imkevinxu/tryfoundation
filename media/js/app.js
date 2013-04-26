@@ -12,6 +12,7 @@
     demoEditor.setTheme("ace/theme/tomorrow_night_eighties");
     demoSession.setMode("ace/mode/html");
     demoSession.setUseWrapMode(true);
+    demoEditor.setShowPrintMargin(false);
     demoEditor.setFontSize(16);
 
     var updateDemoPreview = function() {
@@ -57,6 +58,7 @@
     editor.setTheme("ace/theme/tomorrow_night_eighties");
     session.setMode("ace/mode/html");
     session.setUseWrapMode(true);
+    editor.setShowPrintMargin(false);
     editor.setFontSize(14);
 
     var updatePreview = function() {
@@ -95,6 +97,7 @@
     quizEditor.setTheme("ace/theme/tomorrow_night_eighties");
     quizSession.setMode("ace/mode/html");
     quizSession.setUseWrapMode(true);
+    quizEditor.setShowPrintMargin(false);
     quizEditor.setFontSize(16);
 
     var updateQuizPreview = function() {
