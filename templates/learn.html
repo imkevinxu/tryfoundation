@@ -14,73 +14,89 @@
             <h2>Foundation Lessons</h2>
 
             <div class="row">
-            <div class="lesson-set small-3 columns">
-                <h4>Buttons</h4>
-                <ul class="side-nav">
-                    {% if user.is_authenticated %}
-                        {% for completion in button_completions %}
-                            <li class="lesson">
-                                <a href="/lesson/{{ completion.lesson.slug }}">
-                                    {% if completion.completed %}
-                                    <i class="icon-check"></i>
-                                    {% else %}
-                                    <i class="icon-check-empty"></i>
-                                    {% endif %}
-                                    {{ completion.lesson.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    {% else %}
-                        {% for lesson in button_lessons %}
-                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.title }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                </ul>
+            <div class="large-12 columns">
+                <h1>Buttons</h1>
+                {% if user.is_authenticated %}
+                    {% for completion in button_completions %}
+                        <a href="/lesson/{{ completion.lesson.slug }}" class="lesson {% if completion.completed %}completed{% endif %}">
+                            <i class="foundicon-checkmark"></i>
+                            <span class="title">{{ completion.lesson.title }}</span>
+                        </a>
+                    {% endfor %}
+                {% else %}
+                    {% for lesson in button_lessons %}
+                    <a href="/lesson/{{ lesson.slug }}" class="lesson">
+                            <i class="foundicon-checkmark"></i>
+                            <span class="title">{{ lesson.title }}</span>
+                    </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            </div>
+    
+            <div class="row">
+            <div class="large-12 columns">
+                <h1>Components</h1>
+                {% if user.is_authenticated %}
+                    {% for completion in component_completions %}
+                        <a href="/lesson/{{ completion.lesson.slug }}" class="lesson {% if completion.completed %}completed{% endif %}">
+                            <i class="foundicon-checkmark"></i>
+                            <span class="title">{{ completion.lesson.title }}</span>
+                        </a>
+                    {% endfor %}
+                {% else %}
+                    {% for lesson in component_lessons %}
+                    <a href="/lesson/{{ lesson.slug }}" class="lesson">
+                            <i class="foundicon-checkmark"></i>
+                            <span class="title">{{ lesson.title }}</span>
+                    </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
             </div>
 
-            <div class="lesson-set small-3 columns">
-                <h4>Components</h4>
-                <ul class="side-nav">
-                    {% if user.is_authenticated %}
-                        {% for completion in component_completions %}
-                            <li class="lesson">
-                                <a href="/lesson/{{ completion.lesson.slug }}">
-                                    {% if completion.completed %}
-                                    <i class="icon-check"></i>
-                                    {% else %}
-                                    <i class="icon-check-empty"></i>
-                                    {% endif %}
-                                    {{ completion.lesson.title }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    {% else %}
-                        {% for lesson in component_lessons %}
-                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.title }}</a></li>
-                        {% endfor %}
-                    {% endif %}
-                </ul>
+            <div class="row">
+            <div class="large-12">
+                <h1>Navigation <small>Coming Soon!</small></h1>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Top Bar</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Side Nav</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Sub Nav</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Breadcrumbs</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Pagination</span>
+                </a>
+
+            </div>
             </div>
 
-            <div class="lesson-set small-3 columns">
-                <h4>Navigation <small> Coming Soon!</small></h4>
-                <ul class="side-nav">
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Top Bar</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Side Nav</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Sub Nav</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Breadcrumbs</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Pagination</a></li>
-                </ul>
-            </div>
-
-
-            <div class="lesson-set small-3 columns">
-                <h4>The Grid <small> Coming Soon!</small></h4>
-                <ul class="side-nav">
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Rows &amp; Columns</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Offsets &amp; Centering</a></li>
-                    <li class="lesson disabled"><a href="#"><!--i class="icon-check-empty"></i--> Source Ordering</a></li>
-                </ul>
+            <div class="row">
+            <div class="large-12">
+                <h1>The Grid <small>Coming Soon!</small></h1>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Rows &amp; Columns</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Offsets &amp; Centering</span>
+                </a>
+                <a href="#" class="lesson disabled">
+                        <i class="foundicon-remove"></i>
+                        <span class="title">Source Ordering</span>
+                </a>
             </div>
             </div>
 

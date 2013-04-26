@@ -280,12 +280,62 @@ input[type="url"][readonly], textarea[readonly] {
    LEARN STYLES
 ----------------------------------------- */
 
-#learn li.lesson {
-
+#learn h1 {
+    font-weight: 300;
 }
 
-#learn li.lesson i {
-    color: black;
+#learn .lesson, #learn .lesson i, #learn .lesson .title {
+    -webkit-transition: all 0.15s linear;
+    -moz-transition: all 0.15s linear;
+    -o-transition: all 0.15s linear;
+    transition: all 0.15s linear;
+}
+
+#learn .lesson {
+    display: inline-block;
+    float: left;
+    width: 22%;
+    height: 140px;
+    margin-right: 2rem;
+    position: relative;
+
+    border: 1px solid #E0E0E0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#learn .lesson:nth-child(5n) {
+    margin-right: 0;
+}
+
+#learn .lesson:hover {
+    border-color: #F03012;
+}
+
+#learn .lesson:hover i {
+    color: #F03012;
+}
+
+#learn .lesson i {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    font-size: 5rem;
+    color: #E0E0E0;
+}
+
+#learn .lesson .title {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: right;
+    text-transform: uppercase;
+
+    font-weight: 300;
+    font-size: 2rem;
+    color: #F03012;
 }
 
 #learn li.lesson.disabled a {
