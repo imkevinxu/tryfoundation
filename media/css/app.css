@@ -276,6 +276,10 @@ input[type="url"][readonly], textarea[readonly] {
     margin-bottom: 0px;
 }
 
+#header_code ul.title-area a {
+    font-weight: 400;
+}
+
 #header_code ul.right {
     right: 50px;
     position: relative
@@ -401,7 +405,7 @@ input[type="url"][readonly], textarea[readonly] {
    LESSON STYLES
 ----------------------------------------- */
 
-#lesson {
+#lesson, #lesson h1, #lesson h2, #lesson h3, #lesson h4, #lesson h5, #lesson h6 {
     font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
 }
 
