@@ -1,0 +1,26 @@
+<div id="header_normal" class="contain-to-grid">
+    <nav class="top-bar">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="{% url index %}">Try Foundation</a></h1>
+            </li>
+        </ul>
+
+        <section class="top-bar-section">
+            <ul class="right">
+                {% if request.user.is_authenticated() %}
+                    <li>
+                        <a href="{% url logout %}">Logout</a>
+                    </li>
+                    <li>
+                        <img src="{{ request.user.get_profile().gravatar }}?s=36" class="profile_picture">
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url index %}">Sign up</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </section>
+    </nav>
+</div>

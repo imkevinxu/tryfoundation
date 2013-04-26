@@ -6,33 +6,13 @@
 
 {% block content %}
 
-<div class="contain-to-grid">
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="{% url index %}">Try Foundation</a></h1>
-            </li>
-        </ul>
-
-        <section class="top-bar-section">
-            <ul class="right">
-                <li class="has-form">
-                    {% if request.user.is_authenticated() %}
-                        <a href="{% url logout %}" class="button">Logout</a>
-                    {% else %}
-                        <a href="{% url login %}" class="button">Log In</a>
-                    {% endif %}
-                </li>
-            </ul>
-        </section>
-    </nav>
-</div>
+{% include 'partials/header_normal.html' %}
 
 <div id="learn">
     <div class="row">
         <div class="large-12 columns">
             <h2>Foundation Lessons</h2>
-            
+
             <div class="row">
             <div class="lesson-set small-3 columns">
                 <h4>Buttons</h4>

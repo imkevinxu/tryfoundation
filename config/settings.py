@@ -120,7 +120,7 @@ AUTHENTICATION_BACKENDS = (
 
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_REDIRECT_URL = reverse_lazy('learn')
 
 LOGIN_URL = '/login/'
 
@@ -129,6 +129,8 @@ LOGOUT_URL = '/logout/'
 ROOT_URLCONF = 'config.urls'
 
 WSGI_APPLICATION = 'config.wsgi.application'
+
+AUTH_PROFILE_MODULE = 'librarian.UserProfile'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates/'),
@@ -142,7 +144,6 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',

@@ -1,6 +1,40 @@
 ;(function ($, window, undefined) {
 
   /* -----------------------------------------
+     HOMEPAGE FUNCTIONS
+  ----------------------------------------- */
+
+  var suggestEmail = function(element, suggestion) {
+    var msg = 'Did you mean <a class="suggestedEmail">' + suggestion.full + '</a>?';
+    $('.mailCheck').html(msg);
+  }
+
+  $('#email_cta input[type=email]').on('blur', function() {
+    $(this).mailcheck({ suggested: suggestEmail });
+  });
+
+  $('#email_cta input[type=submit]').hover(function() {
+    $('#email_cta input[type=email]').mailcheck({ suggested: suggestEmail });
+  });
+
+  $('body').on('click', '.suggestedEmail', function() {
+    $('#email_cta input[type=email]').val($(this).html());
+    $('.mailCheck').html('* Not affiliated or endorsed by <a href="http://zurb.com/?ref=tryfoundation" target="_blank">ZURB</a>... yet...');
+  });
+
+  $('#email_cta').submit(function(e) {
+    var $input = $(this).find('.email');
+    if ($.trim($input.val()) == '') {
+      e.preventDefault();
+      $input.focus();
+      $input.addClass('animated shake');
+      window.setTimeout( function() {
+        $input.removeClass('animated shake').focus()
+      }, 1000);
+    }
+  });
+
+  /* -----------------------------------------
      DEMO EDITOR SETTINGS
   ----------------------------------------- */
 

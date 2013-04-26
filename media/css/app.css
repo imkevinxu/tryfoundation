@@ -47,9 +47,50 @@ h1, h2, h3, h4, h5, h6 {
     color: #222;
 }
 
+/* -----------------------------------------
+   OVERRIDE STYLES
+----------------------------------------- */
+
+label, input {
+    font-weight: 600;
+}
+
 input::-webkit-input-placeholder { color: #d5dadd; }
 input:-moz-placeholder { color: #d5dadd; }
 input:-ms-input-placeholder { color: #d5dadd; }
+
+.custom.button {
+    background-color: #F03012;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.custom.button:hover {
+    background-color: #D82B11;
+}
+
+/* -----------------------------------------
+   LOGIN STYLES
+----------------------------------------- */
+
+#login {
+    margin-top: 40px;
+}
+
+#login h1 {
+    font-weight: 300;
+}
+
+#login li {
+    list-style-type: none;
+}
+
+#login #login-msg {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #F0301C;
+}
 
 /* -----------------------------------------
    HERO STYLES
@@ -59,9 +100,35 @@ input:-ms-input-placeholder { color: #d5dadd; }
     background-color: #0f96b6;
     background-image: url(/media/images/yeti.png);
     background-repeat: no-repeat;
-    background-position: 100% 0%;
+    background-position: 100% 100px;
     padding-bottom: 20px;
     color: #FFF;
+}
+
+#hero #nav ul {
+    margin: 0;
+    top: 20px;
+}
+
+#hero #nav li {
+    float: right;
+    margin: 0;
+    list-style-type: none;
+}
+
+#hero #nav li a:not(.button) {
+    top: 10px;
+    right: 15px;
+    position: relative;
+    text-decoration: underline
+}
+
+#hero #nav li a:not(.button):hover {
+    text-decoration: none;
+}
+
+#hero #nav .button {
+    color: #444;
 }
 
 #hero p {
@@ -70,12 +137,17 @@ input:-ms-input-placeholder { color: #d5dadd; }
 }
 
 #hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 300;
     color: #FFF;
 }
 
+#hero #nav h1 a {
+    text-decoration: none;
+}
+
 #hero h2 {
+    font-size: 3rem;
     font-weight: 300;
     color: #FFF;
 }
@@ -126,6 +198,15 @@ input:-ms-input-placeholder { color: #d5dadd; }
     display: block;
 }
 
+#hero a.suggestedEmail {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#hero a.suggestedEmail:hover {
+    text-decoration: none;
+}
+
 /* -----------------------------------------
    DEMO STYLES
 ----------------------------------------- */
@@ -149,6 +230,26 @@ input:-ms-input-placeholder { color: #d5dadd; }
     border-top: none;
     position: relative;
     top: -4px;
+}
+
+/* -----------------------------------------
+   HEADER NORMAL STYLES
+----------------------------------------- */
+
+#header_normal, #header_normal nav, #header_normal ul, #header_normal li, #header_normal a {
+    background-color: #0F96B6;
+}
+
+#header_normal a:hover {
+    background-color: #107795;
+}
+
+#header_normal img.profile_picture {
+    position: relative;
+    top: 4px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;;
 }
 
 /* -----------------------------------------
