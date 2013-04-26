@@ -41,7 +41,7 @@ def learn(request):
             return redirect('learn')
     else:
         user = request.user
-    if user.is_authenticated():
+    if user.is_authenticated() and LessonCompletion.objects.filter(user=user).exists():
         button_completions = LessonCompletion.objects.filter(user=user, lesson__group="buttons")
         component_completions = LessonCompletion.objects.filter(user=user, lesson__group="components")
     else:
