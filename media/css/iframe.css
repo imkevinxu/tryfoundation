@@ -1,4 +1,4 @@
-html, body {
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
+* {
+    -webkit-font-smoothing: antialiased !important;
+    font-smoothing: antialiased !important;
 }
