@@ -82,6 +82,10 @@ input:-ms-input-placeholder { color: #d5dadd; }
     text-decoration: underline
 }
 
+#hero #nav a:not(.button):hover {
+    text-decoration: none;
+}
+
 #hero #nav .button {
     color: #444;
 }
@@ -147,6 +151,15 @@ input:-ms-input-placeholder { color: #d5dadd; }
     font-size: 0.75rem;
     margin-top: 15px;
     display: block;
+}
+
+#hero a.suggestedEmail {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#hero a.suggestedEmail:hover {
+    text-decoration: none;
 }
 
 /* -----------------------------------------
