@@ -112,11 +112,24 @@ footer h4 {
     margin: 0;
 }
 
+footer a, footer a:hover {
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: underline
+}
+
+footer .lighter {
+    color: #999;
+}
+
 footer#homepage {
     background-color: #0f96b6;
 }
 
-footer#homepage h4, footer#homepage small, footer#homepage a {
+footer#homepage h4, footer#homepage small,
+footer#homepage a, footer#homepage .lighter {
     color: #FFF;
 }
 
