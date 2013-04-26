@@ -11,6 +11,7 @@ from django.template import loader, RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from coffin.shortcuts import render_to_response, render, redirect
 from emailusernames.utils import create_user, get_user, user_exists
+import datetime
 
 from librarian.models import *
 from librarian.model_forms import *
@@ -58,6 +59,25 @@ def lesson(request, slug):
         return redirect('index')
 
     return render(request, "lesson.html", locals())
+
+def attempt(request):
+    try:
+        user = User.objects.get(id=request.POST['user'])
+        lesson = Lesson.objects.get(id=request.POST['lesson'])
+        success = True if request.POST['outcome'] == 'success' else False
+
+        completion = LessonCompletion.objects.get(user=user, lesson=lesson)
+        if success and not completion.completed:
+            completion.completed = True
+            completion.completed_at = datetime.datetime.now()
+            completion.save()
+
+        attempt = LessonAttempt(user=user, lesson=lesson, success=success)
+        attempt.save()
+
+        return HttpResponse('Attempt recorded.')
+    except KeyError:
+        return HttpResponse('Internal Server Error. Attempt not recorded.')
 
 # -----------------------------------------
 #   ACCOUNT CREATION FUNCTIONS

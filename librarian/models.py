@@ -68,8 +68,19 @@ class Lesson(Base):
 
         super(Lesson, self).save(*args, **kwargs)
 
+    def _next_url(self):
+        try:
+            next_lesson = Lesson.objects.get(id=self.id+1)
+            next_url = '/lesson/%s' % next_lesson.slug
+        except Lesson.DoesNotExist:
+            next_url = '/learn'
+        return next_url
+
     def __str__(self):
         return self.slug
+
+
+    next_url = property(_next_url)
 
 
 class LessonCompletion(Base):
@@ -80,3 +91,11 @@ class LessonCompletion(Base):
 
     def __str__(self):
         return '%s, %s' % (self.user.email, self.lesson)
+
+
+class LessonAttempt(Base):
+    user = models.ForeignKey(User)
+    lesson = models.ForeignKey(Lesson)
+    success = models.BooleanField(default=False)
+    attempted_at = models.DateTimeField(auto_now_add=True)
+

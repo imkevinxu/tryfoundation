@@ -13,6 +13,7 @@ urlpatterns = patterns('librarian.views',
     url(r'^$', 'index', name='index'),
     url(r'^learn/$', 'learn', name='learn'),
     url(r'^lesson/(?P<slug>[\w-]+)/$', 'lesson', name='lesson'),
+    url(r'^attempt/$', 'attempt', name='attempt'),
 
     url(r'^signup/$', 'signup', name='signup'),
     url(r'^confirm/$', 'confirm', name='confirm'),

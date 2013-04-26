@@ -207,12 +207,15 @@
 
     var objectiveResult = checkObjective($('#preview').contents());
     if (objectiveResult) {
+      sendCompletion(true);
       $('#objectiveModal .objective-success').fadeIn();
       $('#objectiveModal .objective-failure').fadeOut();
     } else {
+      sendCompletion(false);
       $('#objectiveModal .objective-failure').fadeIn();
       $('#objectiveModal .objective-success').fadeOut();
     }
+
   });
 
   $('.objective-retry').click(function(e) {
