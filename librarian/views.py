@@ -16,6 +16,8 @@ from librarian.models import *
 from librarian.model_forms import *
 from librarian.forms import *
 
+import md5
+
 def index(request):
     return render(request, "index.html", locals())
 
@@ -32,31 +34,27 @@ def lesson(request, slug):
 
     return render(request, "lesson.html", locals())
 
-
-
 def signup(request):
     if request.method == "POST":
         email = request.POST['email'].strip()
         try:
-            user = User.objects.get(email=email)
+            user = get_user(email)
             if user == request.user and request.user.is_authenticated() and request.user.has_usable_password():
-                return redirect('courses')
+                return redirect('learn')
 
             logout(request)
             if not user.has_usable_password():
-                return redirect('/courses/?email=%s' % email.replace('+', '%2B'))
+                return redirect('/learn/?email=%s' % email.replace('+', '%2B'))
             else:
                 msg = "You already have an account :)"
                 return redirect('/login/?email=%s&msg=%s' % (email.replace('+', '%2B'), msg))
 
         except User.DoesNotExist:
             logout(request)
-            user = User(username=email, email=email)
-            user.set_unusable_password()
-            user.save()
-            profile = UserProfile(user=user, is_curator=False)
+            user = create_user(email)
+            profile = UserProfile(user=user)
             profile.gravatar = "http://www.gravatar.com/avatar/%s.jpg" % md5.new(email.strip().lower()).hexdigest()
             profile.save()
-            return redirect('/courses/?email=%s' % email.replace('+', '%2B'))
+            return redirect('/learn/?email=%s' % email.replace('+', '%2B'))
 
     return redirect('index')

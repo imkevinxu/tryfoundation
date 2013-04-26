@@ -12,8 +12,8 @@ class UserProfileInline(admin.StackedInline):
 # Define a new User admin
 class UserAdmin(UserAdmin):
     inlines = (UserProfileInline, )
-    list_display = ('email', 'first_name', 'last_name', 'created_at')
-    ordering = ['-created_at']
+    list_display = ('email', 'first_name', 'last_name', 'date_joined')
+    ordering = ['-date_joined']
     search_fields = ['email', 'first_name', 'last_name']
 
 # Re-register UserAdmin
