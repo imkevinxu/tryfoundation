@@ -1,8 +1,8 @@
 <h2>Quiz time</h2>
 
-<p class="lead">Make a green <span class="emphasis">success button</span> with very <span class="emphasis">round</span> corners saying your favorite superhero's name.</p>
+<p class="lead">Make a <span class="emphasis">gray split button</span> with the name of your hometown.</p>
 
-<div id="quizEditor">{{'<a class="">Batman</a>'|escape}}</div>
+<div id="quizEditor">{{'<a class="">New York</a>'|escape}}</div>
 
 <div id="quizPreviewWrapper">
     <img src="{{ MEDIA_URL }}images/chrome-frame.png" alt="chrome-frame">
@@ -12,7 +12,7 @@
 <a href="#" id="quizSubmit" class="button expand">Submit</a>
 
 <div id="quizCongratsWrapper">
-    <a href="#" id="quizCongrats" class="success button expand">Hurray! You're awesome :)</a>
+    <a href="/learn" id="quizCongrats" class="success button expand">Hurray! You're awesome :)</a>
 </div>
 
 <div id="quizTryAgainWrapper">
@@ -22,6 +22,6 @@
 
 <script>
     var passQuiz = function() {
-        return $('#quizPreview').contents().find('a').is('.success.round.button');
-    }
+        return $('#quizPreview').contents().find('a.secondary.split.button').find('span').length > 0;
+    };
 </script>

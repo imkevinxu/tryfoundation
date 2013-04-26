@@ -30,7 +30,7 @@
     <div id="left">
         <div id="editor">{% include lesson.code_partial %}</div>
 
-        {% set awesomePhrase = ["Next Lesson", "Quiz Me", "Next"]%}
+        {% set awesomePhrase = ["Keep Going", "I'm Done", "Next Lesson", "Quiz Me", "Next"] %}
         <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random }}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>
 
@@ -54,12 +54,14 @@
                         {% include lesson.example_partial %}
                     </div>
                 </section>
+                {#
                 <section>
                     <p class="title" data-section-title><a href="#documentation">Documentation</a></p>
                     <div class="content" data-section-content>
                         {% include lesson.documentation_partial %}
                     </div>
                 </section>
+                #}
             </div>
         </div>
     </div>

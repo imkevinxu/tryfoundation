@@ -1,0 +1,27 @@
+<h2>Quiz time</h2>
+
+<p class="lead">Make a green <span class="emphasis">success button</span> with very <span class="emphasis">round</span> corners saying your favorite superhero's name.</p>
+
+<div id="quizEditor">{{'<a class="">Batman</a>'|escape}}</div>
+
+<div id="quizPreviewWrapper">
+    <img src="{{ MEDIA_URL }}images/chrome-frame.png" alt="chrome-frame">
+    <iframe id="quizPreview"></iframe>
+</div>
+
+<a href="#" id="quizSubmit" class="button expand">Submit</a>
+
+<div id="quizCongratsWrapper">
+    <a href="/lesson/buttons-groups" id="quizCongrats" class="success button expand">Hurray! You're awesome :)</a>
+</div>
+
+<div id="quizTryAgainWrapper">
+    <a href="#" id="quizTryAgain" class="alert button expand">Sorry, try again :(</a>
+    <p>Feel free to go back to the lesson to try some more.</p>
+</div>
+
+<script>
+    var passQuiz = function() {
+        return $('#quizPreview').contents().find('a.success.round.button').length > 0;
+    }
+</script>
