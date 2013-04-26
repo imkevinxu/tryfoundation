@@ -57,7 +57,7 @@
     editor.setTheme("ace/theme/tomorrow_night_eighties");
     session.setMode("ace/mode/html");
     session.setUseWrapMode(true);
-    editor.setFontSize(20);
+    editor.setFontSize(14);
 
     var updatePreview = function() {
         iframe.contentWindow.document.open('text/html', 'replace');
