@@ -89,6 +89,7 @@ TEMPLATE_LOADERS = (
 )
 
 PASSWORD_HASHERS = (
+    'hacks.hashers.MyPBKDF2PasswordHasher',
     'django.contrib.auth.hashers.BCryptPasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
