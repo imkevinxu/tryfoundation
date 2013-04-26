@@ -122,11 +122,14 @@
       var winHeight = $(this).height() - 45;
       var chromeFrameHeight = $('#chrome-frame').height();
       $('#editor').height(winHeight);
+      $('#loader').height(winHeight);
       $('#preview').height(winHeight/2 - chromeFrameHeight + 1);
       $('#preview-wrapper, #content').height(winHeight/2);
       this.setTimeout(function() {
         $('.section-container').height(winHeight/2);
         $('.section-container div.content').height(winHeight/2 - 81);
+        $('#editor').css('visibility', 'visible');
+        $('#loader').css('display', 'none');
       }, 100);
     });
 
