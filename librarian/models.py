@@ -79,7 +79,6 @@ class Lesson(Base):
     def __str__(self):
         return self.slug
 
-
     next_url = property(_next_url)
 
 
