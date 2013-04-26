@@ -22,6 +22,8 @@ def index(request):
     return render(request, "index.html", locals())
 
 def learn(request):
+    email = request.GET.get('email', None)
+    ref = request.GET.get('ref', None)
     lessons = Lesson.objects.all()
     return render(request, "learn.html", locals())
 

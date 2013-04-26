@@ -192,6 +192,26 @@ input:-ms-input-placeholder { color: #d5dadd; }
 }
 
 /* -----------------------------------------
+   HEADER NORMAL STYLES
+----------------------------------------- */
+
+#header_normal, #header_normal nav, #header_normal ul, #header_normal li, #header_normal a {
+    background-color: #0F96B6;
+}
+
+#header_normal a:hover {
+    background-color: #107795;
+}
+
+#header_normal img.profile_picture {
+    position: relative;
+    top: 4px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;;
+}
+
+/* -----------------------------------------
    LEARN STYLES
 ----------------------------------------- */
 

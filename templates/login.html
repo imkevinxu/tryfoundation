@@ -2,11 +2,17 @@
 {% block title %}Log In - {{ super() }}{% endblock %}
 {% block content %}
 
+{% include 'partials/header_normal.html' %}
+
 <div id="login" class="row">
     <div class="large-5 large-centered columns">
-        <h2>Welcome</h2>
+        <h2>Log in</h2>
 
         <form action="{% url login %}" method="post">{% csrf_token %}
+
+            {% if msg %}
+                <div id="login-msg">{{ msg }}</div>
+            {% endif %}
 
             {{ form.as_ul()|safe }}
             <input type="hidden" name="next" value="{{ next }}" />
