@@ -275,6 +275,11 @@ footer#homepage a:hover {
 #demo .middle .button {
     font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
     font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#demo .middle small {
+    color: #FFF;
 }
 
 #demo .middle a#stuck {
