@@ -18,12 +18,30 @@ from librarian.forms import *
 
 import md5
 
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 def index(request):
     return render(request, "index.html", locals())
 
 def learn(request):
+    confirm = False
     email = request.GET.get('email', None)
     ref = request.GET.get('ref', None)
+
+    if email:
+        try:
+            user = get_user(email)
+            if not user.has_usable_password():
+                confirm = True
+                logout(request)
+            else:
+                return redirect('learn')
+        except User.DoesNotExist:
+            return redirect('learn')
+
     lessons = Lesson.objects.all()
     return render(request, "learn.html", locals())
 
@@ -35,6 +53,10 @@ def lesson(request, slug):
         return redirect('index')
 
     return render(request, "lesson.html", locals())
+
+# -----------------------------------------
+#   ACCOUNT CREATION FUNCTIONS
+# -----------------------------------------
 
 def signup(request):
     if request.method == "POST":
@@ -60,3 +82,50 @@ def signup(request):
             return redirect('/learn/?email=%s' % email.replace('+', '%2B'))
 
     return redirect('index')
+
+def confirm(request):
+    status = 'failure'
+    if request.method == "POST":
+        try:
+            user = get_user(request.POST['email'])
+            user.set_password(request.POST['password'])
+            user.save()
+            user = authenticate(email=user.email, password=request.POST['password'])
+            if user:
+                login(request, user)
+                status = 'success'
+        except User.DoesNotExist:
+            return redirect('index')
+
+    return HttpResponse(json.dumps({
+        'status' : status
+        }, ensure_ascii=False), mimetype='application/json')
+
+def create(request):
+    status = 'failure'
+    if request.method == "POST":
+        logout(request)
+        email = request.POST['email'].strip()
+        try:
+            user = get_user(email)
+            if not user.has_usable_password():
+                user.set_password(request.POST['password'])
+                user.save()
+            user = authenticate(email=user.email, password=request.POST['password'])
+            if user:
+                login(request, user)
+                status = 'success'
+
+        except User.DoesNotExist:
+            user = create_user(email, request.POST['password'])
+            profile = UserProfile(user=user)
+            profile.gravatar = "http://www.gravatar.com/avatar/%s.jpg" % md5.new(email.strip().lower()).hexdigest()
+            profile.save()
+            user = authenticate(email=user.email, password=request.POST['password'])
+            if user:
+                login(request, user)
+                status = 'success'
+
+    return HttpResponse(json.dumps({
+        'status' : status
+        }, ensure_ascii=False), mimetype='application/json')

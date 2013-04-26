@@ -23,6 +23,7 @@
 .error { color: #c60f13; }
 .visible { opacity: 1; }
 .invisible { opacity: 0; }
+.strong { font-weight: 600; }
 
 /* -----------------------------------------
    BASE STYLES
@@ -59,6 +60,17 @@ input::-webkit-input-placeholder { color: #d5dadd; }
 input:-moz-placeholder { color: #d5dadd; }
 input:-ms-input-placeholder { color: #d5dadd; }
 
+img::selection, img::-moz-selection {
+    background: transparent;
+}
+
+input[type="text"][readonly], input[type="password"][readonly], input[type="date"][readonly],
+input[type="datetime"][readonly], input[type="email"][readonly], input[type="number"][readonly],
+input[type="search"][readonly], input[type="tel"][readonly], input[type="time"][readonly],
+input[type="url"][readonly], textarea[readonly] {
+    background-color: #DDD;
+}
+
 .custom.button {
     background-color: #F03012;
     border: none;
@@ -73,10 +85,6 @@ input:-ms-input-placeholder { color: #d5dadd; }
 /* -----------------------------------------
    LOGIN STYLES
 ----------------------------------------- */
-
-#login {
-    margin-top: 40px;
-}
 
 #login h1 {
     font-weight: 300;
@@ -150,10 +158,6 @@ input:-ms-input-placeholder { color: #d5dadd; }
     font-size: 3rem;
     font-weight: 300;
     color: #FFF;
-}
-
-#hero .strong {
-    font-weight: 600;
 }
 
 #hero .panel {
@@ -236,6 +240,10 @@ input:-ms-input-placeholder { color: #d5dadd; }
    HEADER NORMAL STYLES
 ----------------------------------------- */
 
+#header_normal {
+    margin-bottom: 20px;
+}
+
 #header_normal, #header_normal nav, #header_normal ul, #header_normal li, #header_normal a {
     background-color: #0F96B6;
 }
@@ -244,12 +252,24 @@ input:-ms-input-placeholder { color: #d5dadd; }
     background-color: #107795;
 }
 
+#header_normal .title-area a {
+    font-weight: 400;
+}
+
 #header_normal img.profile_picture {
     position: relative;
     top: 4px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     border-radius: 18px;;
+}
+
+/* -----------------------------------------
+   MODAL STYLES
+----------------------------------------- */
+
+.reveal-modal h2 {
+    font-weight: 300;
 }
 
 /* -----------------------------------------
@@ -262,6 +282,10 @@ input:-ms-input-placeholder { color: #d5dadd; }
 
 #learn li.lesson i {
     color: black;
+}
+
+#learn li.lesson.disabled a {
+    color: #CCC;
 }
 
 /* -----------------------------------------

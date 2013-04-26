@@ -35,6 +35,41 @@
   });
 
   /* -----------------------------------------
+     MODAL FUNCTIONS
+  ----------------------------------------- */
+
+  if ($('#confirm-modal').length) {
+    $(document).foundation('reveal', {
+        closeOnBackgroundClick: false,
+    });
+    $('#confirm-modal').foundation('reveal', 'open');
+  }
+
+  if ($('#create-modal').length) {
+    $('#create-modal').foundation('reveal', 'open');
+  }
+
+  $('#confirm-modal form, #create-modal form').on('submit', function(e) {
+    e.preventDefault();
+    var $modal = $(this).parent();
+    $.ajax({
+      type: 'POST',
+      url: $(this).attr('action'),
+      data: $(this).serialize(),
+      success: function (data) {
+        if (data['status'] == "success") {
+          $('#social-modal').foundation('reveal', 'open');
+          $('.reveal-modal-bg').on('click', function() {
+            $('#social-modal').foundation('reveal', 'close');
+          });
+        } else {
+          $modal.html('<h2>Sorry, looks like an error occurred. Please refresh the page</h2>');
+        }
+      }
+    });
+  });
+
+  /* -----------------------------------------
      DEMO EDITOR SETTINGS
   ----------------------------------------- */
 
@@ -190,7 +225,6 @@
 
   });
 
-
   /* -----------------------------------------
      ZURB FOUNDATION INITIALIZATION
   ----------------------------------------- */
@@ -205,5 +239,41 @@
       }, 0);
     });
   }
+
+  /* -----------------------------------------
+     AUTO-SETS CSRF TOKEN FOR AJAX CALLS
+  ----------------------------------------- */
+
+  // Acquiring CSRF token and setting it to X-CSRFToken header for AJAX POST Request
+  function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = jQuery.trim(cookies[i]);
+        // Does this cookie string begin with the name we want?
+        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+  }
+
+  var csrftoken = getCookie('csrftoken');
+  function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+  }
+
+  $.ajaxSetup({
+    crossDomain: false, // obviates need for sameOrigin test
+    beforeSend: function(xhr, settings) {
+      if (!csrfSafeMethod(settings.type)) {
+        xhr.setRequestHeader('X-CSRFToken', csrftoken);
+      }
+    }
+  });
 
 })(jQuery, this);

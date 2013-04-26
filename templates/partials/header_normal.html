@@ -2,7 +2,7 @@
     <nav class="top-bar">
         <ul class="title-area">
             <li class="name">
-                <h1><a href="{% url index %}">Try Foundation</a></h1>
+                <h1><a href="{% url index %}">Try <span class="strong">Foundation</span></a></h1>
             </li>
         </ul>
 
@@ -13,7 +13,7 @@
                         <a href="{% url logout %}">Logout</a>
                     </li>
                     <li>
-                        <img src="{{ request.user.get_profile().gravatar }}?s=36" class="profile_picture">
+                        <img src="{{ request.user.get_profile().gravatar }}?s=36&d=mm" class="profile_picture">
                     </li>
                 {% else %}
                     <li>
