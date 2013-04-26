@@ -269,6 +269,35 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 /* -----------------------------------------
+   HEADER CODE STYLES
+----------------------------------------- */
+
+#header_code nav {
+    margin-bottom: 0px;
+}
+
+#header_code ul.right {
+    right: 50px;
+    position: relative
+}
+
+#header_code, #header_code nav, #header_code ul, #header_code li, #header_code a {
+    background-color: #272727;
+}
+
+#header_code a:hover {
+    background-color: #1E1E1E;
+}
+
+#header_code img.profile_picture {
+    position: relative;
+    top: 4px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;;
+}
+
+/* -----------------------------------------
    MODAL STYLES
 ----------------------------------------- */
 
@@ -357,6 +386,7 @@ input[type="url"][readonly], textarea[readonly] {
 
 #learn .lesson.disabled:hover {
     border-color: #E0E0E0;
+    cursor: default;
 }
 
 #learn .lesson.disabled:hover i {
@@ -364,20 +394,12 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 #learn .lesson.disabled .title {
-    color: #E0E0E0;;
-}
-
-#learn .lesson.disabled {
-    color: #CCC;
+    color: #828282;
 }
 
 /* -----------------------------------------
    LESSON STYLES
 ----------------------------------------- */
-
-#lesson .top-bar {
-    margin: 0;
-}
 
 #lesson #left, #lesson #right {
     width: 50%;
