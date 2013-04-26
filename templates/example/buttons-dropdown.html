@@ -1,70 +1,139 @@
-<!-- Size Classes -->
-<a href="#" class="button dropdown">Default Button</a><br>
-<a href="#" class="tiny button dropdown">Tiny Button</a><br>
-<a href="#" class="small button dropdown">Small Button</a><br>
-<a href="#" class="large button dropdown">Large Button</a><br>
-
-<!-- Color Classes -->
-<a href="#" class="button dropdown secondary">Secondary Button</a><br>
-<a href="#" class="button dropdown success">Success Button</a><br>
-<a href="#" class="button dropdown alert">Alert Button</a><br>
-
-<!-- Radius Classes -->
-<a href="#" class="button dropdown radius">Radius Button</a><br>
-<a href="#" class="button dropdown round">Round Button</a><br>
-
-<div class="html"><div class="CodeRay">
-  <div class="code"><pre><span class="comment">&lt;!-- Size Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Default Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">tiny button dropdown</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Tiny Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">small button dropdown</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Small Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">large button dropdown</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Large Button<span class="tag">&lt;/a&gt;</span>
-
-<span class="comment">&lt;!-- Color Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown secondary</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Secondary Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown success</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Success Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown alert</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Alert Button<span class="tag">&lt;/a&gt;</span>
-
-<span class="comment">&lt;!-- Radius Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown radius</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Radius Button<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button dropdown round</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Round Button<span class="tag">&lt;/a&gt;</span>
-</pre></div>
-</div>
+<div class="row">
+    <a href="#" class="button dropdown">Default Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown">Default Button</a>'|escape }}
+    </code></pre>
 </div>
 
-
-
-<!-- Size Classes -->
-<a href="#" class="button split">Default Button <span></span></a><br>
-<a href="#" class="tiny button split">Tiny Button <span></span></a><br>
-<a href="#" class="small button split">Small Button <span></span></a><br>
-<a href="#" class="large button split">Large Button <span></span></a><br>
-
-<!-- Color Classes -->
-<a href="#" class="button split secondary">Secondary Button <span></span></a><br>
-<a href="#" class="button split success">Success Button <span></span></a><br>
-<a href="#" class="button split alert">Alert Button <span></span></a><br>
-
-<!-- Radius Classes -->
-<a href="#" class="button split radius">Radius Button <span></span></a><br>
-<a href="#" class="button split round">Round Button <span></span></a><br>
-
-
-<div class="html"><div class="CodeRay">
-  <div class="code"><pre><span class="comment">&lt;!-- Size Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Default Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">tiny button split</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Tiny Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">small button split</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Small Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">large button split</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Large Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-
-<span class="comment">&lt;!-- Color Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split secondary</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Secondary Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split success</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Success Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split alert</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Alert Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-
-<span class="comment">&lt;!-- Radius Classes --&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split radius</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Radius Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">#</span><span class="delimiter">"</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button split round</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>Round Button <span class="tag">&lt;span&gt;</span><span class="tag">&lt;/span&gt;</span><span class="tag">&lt;/a&gt;</span>
-</pre></div>
+<div class="row">
+    <a href="#" class="tiny button dropdown">Tiny Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="tiny button dropdown">Tiny Button</a>'|escape }}
+    </code></pre>
 </div>
+
+<div class="row">
+    <a href="#" class="small button dropdown">Small Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="small button dropdown">Small Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="large button dropdown">Large Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="large button dropdown">Large Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button dropdown secondary">Secondary Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown secondary">Secondary Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button dropdown success">Success Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown success">Success Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button dropdown alert">Alert Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown alert">Alert Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button dropdown radius">Radius Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown radius">Radius Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button dropdown round">Round Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button dropdown round">Round Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button disabled">Disabled Button</a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button disabled">Disabled Button</a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split">Default Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split">Default Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="tiny button split">Tiny Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="tiny button split">Tiny Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="small button split">Small Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="small button split">Small Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="large button split">Large Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="large button split">Large Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split secondary">Secondary Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split secondary">Secondary Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split success">Success Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split success">Success Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split alert">Alert Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split alert">Alert Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split radius">Radius Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split radius">Radius Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split round">Round Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split round">Round Button <span></span></a>'|escape }}
+    </code></pre>
+</div>
+
+<div class="row">
+    <a href="#" class="button split disabled">Disabled Button <span></span></a><br/>
+    <pre><code class="language-markup">
+        {{ '<a href="#" class="button split disabled">Disabled Button <span></span></a>'|escape }}
+    </code></pre>
 </div>
