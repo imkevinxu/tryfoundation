@@ -9,9 +9,14 @@
 {% include 'partials/header_code.html' %}
 
 <div id="lesson">
+    
+    <div id="loader">
+        <img src="{{ MEDIA_URL }}images/loader.gif" alt="">
+    </div>
+
 
     <div id="left">
-        <div id="editor">{% include lesson.code_partial %}</div>
+        <div id="editor">{% include lesson.code_partial %}</div>    
 
         <a href="#" class="button objective-check" data-reveal-id="objectiveModal">I'm Done&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>

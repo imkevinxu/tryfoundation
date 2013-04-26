@@ -443,6 +443,23 @@ input[type="url"][readonly], textarea[readonly] {
     position: relative;
 }
 
+#lesson #editor {
+    visibility: hidden;
+}
+
+#lesson #loader {
+    background-color: #FFFFFF;
+    opacity: .9;
+    position: absolute;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+}
+
+#lesson #loader img {
+    margin-top: 25%;
+}
+
 #lesson #editor, #lesson #chrome-frame {
     width: 100%;
 }
