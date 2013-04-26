@@ -439,10 +439,22 @@ input[type="url"][readonly], textarea[readonly] {
 
 #lesson .section-container {
     margin: 0;
+    background-color: #2C2C2C;
 }
 
 #lesson .section-container div.content {
     overflow: scroll;
+}
+
+#lesson .section-container.tabs section .content,
+#lesson .section-container.tabs .section .content {
+    border-bottom: none;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 
 /* -----------------------------------------
