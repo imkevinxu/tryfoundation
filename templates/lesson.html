@@ -6,26 +6,9 @@
 
 {% block content %}
 
-<div id="lesson">
-    <nav class="top-bar">
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="{% url index %}">Try Foundation</a></h1>
-            </li>
-        </ul>
+{% include 'partials/header_code.html' %}
 
-        <section class="top-bar-section">
-            <ul class="right">
-                <li class="has-form">
-                    {% if request.user.is_authenticated() %}
-                        <a href="{% url logout %}" class="button">Logout</a>
-                    {% else %}
-                        <a href="{% url login %}" class="button">Log In</a>
-                    {% endif %}
-                </li>
-            </ul>
-        </section>
-    </nav>
+<div id="lesson">
 
     <div id="left">
         <div id="editor">{% include lesson.code_partial %}</div>
