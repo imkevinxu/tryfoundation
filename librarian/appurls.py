@@ -14,6 +14,8 @@ urlpatterns = patterns('librarian.views',
     url(r'^learn/$', 'learn', name='learn'),
     url(r'^lesson/(?P<slug>[\w-]+)/$', 'lesson', name='lesson'),
 
+    url(r'^signup/$', 'signup', name='signup'),
+
     url(r'^login/$', smartlogin, kwargs=dict(template_name='login.html'), name='login'),
     url(r'^logout/$', logout, kwargs=dict(next_page='/'), name='logout'),
 )

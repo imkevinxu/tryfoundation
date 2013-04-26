@@ -14,6 +14,30 @@ class Base(models.Model):
     class Meta:
         abstract = True
 
+class UserProfile(models.Model):
+    user     = models.OneToOneField(User)
+    gravatar = models.URLField(blank=True, null=True)
+
+    # Class Functions
+    def __unicode__(self):
+        if self.user.get_full_name() != '':
+            return self.user.get_full_name()
+        return u'%s' % self.user
+
+    def save(self, *args, **kwargs):
+        try:
+            existing = UserProfile.objects.get(user=self.user)
+            self.id = existing.id #force update instead of insert
+        except UserProfile.DoesNotExist:
+            pass
+        models.Model.save(self, *args, **kwargs)
+
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+       profile, created = UserProfile.objects.get_or_create(user=instance)
+
+post_save.connect(create_user_profile, sender=User)
+
 class Lesson(Base):
     title = models.CharField(max_length=255)
     slug  = models.SlugField(max_length=255)
