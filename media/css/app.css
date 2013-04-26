@@ -83,6 +83,22 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 /* -----------------------------------------
+   FOOTER STYLES
+----------------------------------------- */
+
+footer {
+    background-color: #0f96b6;
+    height: 100px;
+    padding: 20px 0 0;
+}
+
+footer h3 {
+    font-weight: 300;
+    color: #FFF;
+    margin: 0;
+}
+
+/* -----------------------------------------
    LOGIN STYLES
 ----------------------------------------- */
 
@@ -96,8 +112,8 @@ input[type="url"][readonly], textarea[readonly] {
 
 #login #login-msg {
     margin-bottom: 20px;
-    font-style: italic;
-    color: #F0301C;
+    font-styl;
+    color: #Fe: italic0301C;
 }
 
 /* -----------------------------------------
