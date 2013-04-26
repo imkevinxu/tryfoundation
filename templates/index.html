@@ -101,8 +101,8 @@
 
 <script type="text/javascript">
     var checkDemo = function(contents) {
-        if (($(contents).find('.button').length > 0 && $(contents).find('.button').text() == 'The Prize') ||
-            ($(contents).find('button').length > 0 && $(contents).find('button').text() == 'The Prize')) {
+        if (($(contents).find('.button').length > 0 && $(contents).find('.button').text().length >= 1) ||
+            ($(contents).find('button').length > 0 && $(contents).find('button').text().length >= 1)) {
             $('#landingModal').foundation('reveal', 'open');
         }
     };
