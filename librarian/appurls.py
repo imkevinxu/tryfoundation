@@ -6,7 +6,7 @@ from config.jinja2 import login
 
 def smartlogin(request, **kwargs):
     if request.user.is_authenticated() and 'next' not in request.GET:
-        return redirect('index')
+        return redirect('learn')
     return login(request, **kwargs)
 
 urlpatterns = patterns('librarian.views',

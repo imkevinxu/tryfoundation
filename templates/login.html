@@ -5,8 +5,8 @@
 {% include 'partials/header_normal.html' %}
 
 <div id="login" class="row">
-    <div class="large-5 large-centered columns">
-        <h2>Log in</h2>
+    <div class="large-4 large-centered columns">
+        <h1>Log in</h1>
 
         <form action="{% url login %}" method="post">{% csrf_token %}
 
@@ -16,7 +16,7 @@
 
             {{ form.as_ul()|safe }}
             <input type="hidden" name="next" value="{{ next }}" />
-            <input class="success button" type="submit" value="Log In" />
+            <input class="custom button expand" type="submit" value="Log In" />
 
         </form>
 

@@ -120,7 +120,7 @@ AUTHENTICATION_BACKENDS = (
 
 from django.core.urlresolvers import reverse_lazy
 
-LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGIN_REDIRECT_URL = reverse_lazy('learn')
 
 LOGIN_URL = '/login/'
 
