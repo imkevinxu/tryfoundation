@@ -1,0 +1,20 @@
+<h5>Advanced Buttons</h5>
+
+<p><strong>Objective: </strong>Make three buttons like the ones below.</p>
+
+<div class="button secondary small">Cancel</div>
+<div class="button success round">Save File</div>
+<div class="button alert large radius">I Accept All Responsibility</div>
+
+<p>Hint: If you're feeling stuck, check out the examples!</p>
+
+<script type="text/javascript">
+	var checkObjective = function(contents) {
+		return $(contents).find('.button.secondary.small').length > 0 &&
+				$(contents).find('.button.success.round').length > 0 &&
+				$(contents).find('.button.alert.large.radius').length > 0 || 
+				$(contents).find('button.secondary.small').length > 0 &&
+				$(contents).find('button.success.round').length > 0 &&
+				$(contents).find('button.alert.large.radius').length > 0;
+	};
+</script>

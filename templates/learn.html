@@ -26,13 +26,13 @@
                                     {% else %}
                                     <i class="icon-check-empty"></i>
                                     {% endif %}
-                                    {{ completion.lesson.name }}
+                                    {{ completion.lesson.title }}
                                 </a>
                             </li>
                         {% endfor %}
                     {% else %}
                         {% for lesson in button_lessons %}
-                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.name }}</a></li>
+                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.title }}</a></li>
                         {% endfor %}
                     {% endif %}
                 </ul>
@@ -50,13 +50,13 @@
                                     {% else %}
                                     <i class="icon-check-empty"></i>
                                     {% endif %}
-                                    {{ completion.lesson.name }}
+                                    {{ completion.lesson.title }}
                                 </a>
                             </li>
                         {% endfor %}
                     {% else %}
                         {% for lesson in component_lessons %}
-                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.name }}</a></li>
+                        <li class="lesson"><a href="/lesson/{{ lesson.slug }}"><i class="icon-check-empty"></i>{{ lesson.title }}</a></li>
                         {% endfor %}
                     {% endif %}
                 </ul>

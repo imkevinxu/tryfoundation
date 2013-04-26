@@ -39,17 +39,14 @@ def learn(request):
                 return redirect('learn')
         except User.DoesNotExist:
             return redirect('learn')
-    #user = request.user
-    #lessons = Lesson.objects.all()
+    else:
+        user = request.user
     if user.is_authenticated():
         button_completions = LessonCompletion.objects.filter(user=user, lesson__group="buttons")
         component_completions = LessonCompletion.objects.filter(user=user, lesson__group="components")
-        print button_completions
     else:
         button_lessons = Lesson.objects.filter(group="buttons")
         component_lessons = Lesson.objects.filter(group="components")
-        print button_lessons
-    print locals()
 
     return render(request, "learn.html", locals())
 
