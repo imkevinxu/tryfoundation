@@ -100,7 +100,7 @@ footer {
     padding: 20px 0 0;
 }
 
-footer h3 {
+footer h4 {
     font-weight: 300;
     margin: 0;
 }
@@ -109,7 +109,7 @@ footer#homepage {
     background-color: #0f96b6;
 }
 
-footer#homepage h3, footer#homepage small, footer#homepage a {
+footer#homepage h4, footer#homepage small, footer#homepage a {
     color: #FFF;
 }
 
@@ -383,6 +383,10 @@ footer#homepage small a:hover {
 /* -----------------------------------------
    LEARN STYLES
 ----------------------------------------- */
+
+#learn {
+    margin-bottom: 50px;
+}
 
 #learn h1 {
     font-weight: 300;
