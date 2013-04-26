@@ -8,6 +8,7 @@ django-debug-toolbar==0.9.4
 django-email-as-username==1.6.5
 django-postgrespool==0.2.4
 gunicorn==0.17.4
+newrelic==1.11.0.55
 psycopg2==2.5
 py-bcrypt==0.3
 wsgiref==0.1.2
