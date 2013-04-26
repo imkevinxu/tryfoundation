@@ -24,6 +24,7 @@
 .visible { opacity: 1; }
 .invisible { opacity: 0; }
 .strong { font-weight: 600; }
+.imp { z-index: 99; }
 
 /* -----------------------------------------
    BASE STYLES
@@ -91,6 +92,12 @@ input[type="url"][readonly], textarea[readonly] {
     top: 8px;
 }
 
+.share.home {
+    top: 12px;
+    position: relative;
+    display: inline-block;
+}
+
 /* -----------------------------------------
    FOOTER STYLES
 ----------------------------------------- */
@@ -115,14 +122,6 @@ footer#homepage h4, footer#homepage small, footer#homepage a {
 
 footer#homepage a:hover {
     text-decoration: underline;
-}
-
-footer#homepage small a {
-    text-decoration: underline;
-}
-
-footer#homepage small a:hover {
-    text-decoration: none;
 }
 
 /* -----------------------------------------
