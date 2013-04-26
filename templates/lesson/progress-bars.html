@@ -1,7 +1,14 @@
 <h5>Alerts</h5>
-<p><strong>Objective: </strong>Make a progress bar like the one below (with 75% progress).</p>
+<p><strong>Objective: </strong>Make a progress bar like the one below (with 75% progress). Use an inline <kbd>style</kbd> attribute.</p>
 
-<div class="row">
+<div class="row objective-solution">
 	<div class="progress success"><span class="meter" style="width:75%"></span></div>
 </div>
 
+<script type="text/javascript">
+	var checkObjective = function(contents) {
+		return $(contents).find('.progress.success').length > 0 &&
+				$(contents).find('.progress.success').children('span.meter').length > 0 &&
+				$(contents).find('.progress.success').children('span.meter').first().attr('style').indexOf('75') > 0;
+	};
+</script>

@@ -25,3 +25,22 @@
     </ul>
   </div>
 </div>
+
+<script type="text/javascript">
+  var checkObjective = function(contents) {
+
+    var button_group = $(contents).find('ul.button-group.round');
+    var button_bar = $(contents).find('div.button-bar');
+
+    return button_group.length > 0 &&
+            (button_group.children().find('.button.alert').length == 3 ||
+              button_group.children().find('button.alert').length == 3) &&
+            button_bar.length > 0 &&
+            button_bar.children('ul.button-group').length == 2 &&
+            (button_bar.children('ul.button-group').first().children().find('.button.small').length == 2 ||
+              button_bar.children('ul.button-group').first().children().find('button.small').length == 2) &&
+            (button_bar.children('ul.button-group').last().children().find('.button.small').length == 4 ||
+              button_bar.children('ul.button-group').last().children().find('button.small').length == 4);
+
+  };
+</script>

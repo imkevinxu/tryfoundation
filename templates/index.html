@@ -54,10 +54,12 @@
 <div id="demo">
     <div class="row">
         <div class="large-5 columns">
-            <div id="demoEditor">{{'<h1>Hello World!</h1>'|escape}}</div>
+            <div id="demoEditor">{% include "_index_demo.html" %}</div>
         </div>
 
         <div class="large-2 columns">
+            <div class="button">The Prize</div>
+            <a href="" class="button secondary">Get Help</a>
         </div>
 
         <div class="large-5 columns">
@@ -67,6 +69,23 @@
     </div>
 </div>
 
+<div id="landingModal" class="reveal-modal medium">
+    <p>Booyah! You did it!</p>
+    <p>Want to learn how to build more with Foundation?</p>
+    <p><a href="" class="button success">See More Lessons</a></p>
+</div>
+
 {% endblock %}
 
-{% block javascript %}{% endblock %}
+{% block javascript %}
+
+<script type="text/javascript">
+    var checkDemo = function(contents) {
+        if (($(contents).find('.button').length > 0 && $(contents).find('.button').text() == 'The Prize') || 
+            ($(contents).find('button').length > 0 && $(contents).find('button').text() == 'The Prize')) {
+            $('#landingModal').foundation('reveal', 'open');
+        }
+    };
+</script>
+
+{% endblock %}

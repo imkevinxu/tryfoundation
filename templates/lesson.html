@@ -30,16 +30,12 @@ n{% extends "base.html" %}
     <div id="left">
         <div id="editor">{% include lesson.code_partial %}</div>
 
-        {% set awesomePhrase = ["Keep Going", "I'm Done", "Next Lesson", "Quiz Me", "Next"] %}
-        <a href="#" class="button" id="modalButton" data-reveal-id="quizModal">{{ awesomePhrase|random }}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
+        {# {% set awesomePhrase = ["Keep Going", "I'm Done", "Next Lesson", "Quiz Me", "Next"] %} #}
+        {% set awesomePhrase = ["I'm Done"] %}
+        <a href="#" class="button objective-check" data-reveal-id="objectiveModal">{{ awesomePhrase|random }}&nbsp;&nbsp;<i class="foundicon-right-arrow"></i></a>
     </div>
 
     <div id="right">
-        <div id="preview-wrapper">
-            <img src="{{ MEDIA_URL }}images/chrome-frame.png" id="chrome-frame" alt="chrome-frame">
-            <iframe id="preview"></iframe>
-        </div>
-
         <div id="content">
             <div class="section-container tabs" data-section="tabs">
                 <section>
@@ -64,14 +60,44 @@ n{% extends "base.html" %}
                 #}
             </div>
         </div>
+
+        <div id="preview-wrapper">
+            <img src="{{ MEDIA_URL }}images/chrome-frame.png" id="chrome-frame" alt="chrome-frame">
+            <iframe id="preview"></iframe>
+        </div>
     </div>
 
 </div>
 
+<div id="objectiveModal" class="reveal-modal medium">
+    
+    <div class="objective-success">
+        <div class="row">
+            <h3>Awesome! You got it!</h3>
+        </div>
+        <div class="row">
+            <div class="small-3 columns"><a href="/learn" class="button secondary">All Lessons</a></div>
+            <div class="small-3 columns"><a href="{{ next_lesson }}" class="button success">Next Lesson</a></div>
+        </div>
+    </div>
+
+    <div class="objective-failure">
+        <div class="row">
+            <h3>Sorry :( That doesn't seem to be right.</h3>
+        </div>
+        <div class="row">
+            <div class="small-3 columns"><a href="/learn" class="button secondary">All Lessons</a></div>
+            <div class="small-3 columns"><a href="#" class="button alert objective-retry">Keep Trying</a></div>
+        </div>
+    </div>
+
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
 {#
 <div id="quizModal" class="reveal-modal medium">
     {% include lesson.quiz_partial %}
-    <a class="close-reveal-modal">&#215;</a>
 </div>
 #}
 
