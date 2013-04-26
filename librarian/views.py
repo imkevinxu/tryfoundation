@@ -15,8 +15,7 @@ from emailusernames.utils import create_user, get_user, user_exists
 from librarian.models import *
 from librarian.model_forms import *
 from librarian.forms import *
-
-import md5
+from librarian.helpers import *
 
 def index(request):
     return render(request, "index.html", locals())
@@ -24,7 +23,17 @@ def index(request):
 def learn(request):
     email = request.GET.get('email', None)
     ref = request.GET.get('ref', None)
-    lessons = Lesson.objects.all()
+    user = request.user
+    #lessons = Lesson.objects.all()
+    if user.is_authenticated():
+        button_completions = LessonCompletion.objects.filter(user=user, lesson__group="buttons")
+        component_completions = LessonCompletion.objects.filter(user=user, lesson__group="components")
+        print button_completions
+    else:
+        button_lessons = Lesson.objects.filter(group="buttons")
+        component_lessons = Lesson.objects.filter(group="components")
+        print button_lessons
+    print locals()
     return render(request, "learn.html", locals())
 
 def lesson(request, slug):
@@ -54,9 +63,8 @@ def signup(request):
         except User.DoesNotExist:
             logout(request)
             user = create_user(email)
-            profile = UserProfile(user=user)
-            profile.gravatar = "http://www.gravatar.com/avatar/%s.jpg" % md5.new(email.strip().lower()).hexdigest()
-            profile.save()
+            profile = create_user_profile(user, email)
+            completions = create_user_completions(user)
             return redirect('/learn/?email=%s' % email.replace('+', '%2B'))
 
     return redirect('index')

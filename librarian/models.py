@@ -42,6 +42,7 @@ post_save.connect(create_user_profile, sender=User)
 class Lesson(Base):
     title = models.CharField(max_length=255)
     slug  = models.SlugField(max_length=255)
+    group = models.CharField(max_length=255, null=True, blank=True)
 
     def _code_partial(self):
         return 'code/%s.html' % self.slug
@@ -66,3 +67,16 @@ class Lesson(Base):
             self.slug = slugify(self.title)
 
         super(Lesson, self).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.slug
+
+
+class LessonCompletion(Base):
+    user = models.ForeignKey(User)
+    lesson = models.ForeignKey(Lesson)
+    completed = models.BooleanField(default=False)
+    completed_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return '%s, %s' % (self.user.email, self.lesson)
