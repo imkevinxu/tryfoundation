@@ -386,6 +386,7 @@ input[type="url"][readonly], textarea[readonly] {
 
 #learn .lesson.disabled:hover {
     border-color: #E0E0E0;
+    cursor: default;
 }
 
 #learn .lesson.disabled:hover i {
@@ -393,11 +394,7 @@ input[type="url"][readonly], textarea[readonly] {
 }
 
 #learn .lesson.disabled .title {
-    color: #E0E0E0;;
-}
-
-#learn .lesson.disabled {
-    color: #CCC;
+    color: #828282;
 }
 
 /* -----------------------------------------
