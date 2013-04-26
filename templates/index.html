@@ -14,9 +14,9 @@
         <ul class="large-4 columns">
             <li>
                 {% if request.user.is_authenticated() %}
-                    <a href="{% url logout %}" class="secondary button">Logout</a>
+                    <a href="{% url logout %}">Logout</a>
                 {% else %}
-                    <a href="{% url login %}" class="secondary button">Log In</a>
+                    <a href="{% url login %}">Log In</a>
                 {% endif %}
             </li>
             <li><a href="{% url learn %}">View all lessons</a></li>
@@ -81,7 +81,7 @@
 
 <script type="text/javascript">
     var checkDemo = function(contents) {
-        if (($(contents).find('.button').length > 0 && $(contents).find('.button').text() == 'The Prize') || 
+        if (($(contents).find('.button').length > 0 && $(contents).find('.button').text() == 'The Prize') ||
             ($(contents).find('button').length > 0 && $(contents).find('button').text() == 'The Prize')) {
             $('#landingModal').foundation('reveal', 'open');
         }
